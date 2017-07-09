@@ -10,6 +10,9 @@
 	<link href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 	<script src="//cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="/Public/statics/self/css/main.css">
+	<script type="text/javascript" src="/Public/statics/format/jshtml/base.js"></script>
+	<script type="text/javascript" src="/Public/statics/format/jshtml/htmlformat.js"></script>
+	<script type="text/javascript" src="/Public/statics/format/jshtml/jsformat.js"></script>
 	<!--<script src="http://7bv9ya.com1.z0.glb.clouddn.com/jquery.cookie.js"></script>-->
 </head>
 <body>
@@ -43,7 +46,7 @@
 		        	<li><a href="#">TCP/IP子网掩码计算换算</a></li>
 	        	</ul>
         	</li>
-	        <li    class="dropdown [keywords]">
+	        <li    class="dropdown active">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">格式化 <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
 	            <li><a href="<?php echo U('Tool/format/jshtml_format');?>">Javascript/HTML压缩、格式化</a></li>
@@ -97,7 +100,27 @@
 </div>
 	<!-- <p class="bg-warning msgs">...</p> -->
 	<div class="left_kuang">
-		<div class="left_main"></div>
+		<div class="left_main">
+			<div class="min-title">
+				<h1>JS/HTML格式化工具</h1>
+			    <h3>请在下框输入您要转换的内容:</h3>  
+			</div>
+		    <textarea class="format_edit" id="content" name="content">/*   粘贴你代码到这里并点击格式化按钮   */
+		/*   例如格式化以下这段代码   */
+		if('this_is'==/an_example/){do_something();}else{var a=b?(c%d):e[f];}
+		    </textarea>
+			<br>
+		    <select id="tabsize" name="tabsize" class="form-control" style="width:120px;float: left;">
+			    <option value="1" selected="selected">制表符缩进</option>
+			    <option value="2">2个空格缩进</option>
+			    <option value="4">4个空格缩进</option>
+			    <option value="8">8个空格缩进</option>
+		    </select>
+		    <input id="beautify" class="btn btn-danger" onclick="return do_js_beautify()" value="格式化代码" type="button">
+		    <input class="btn btn-primary" onclick="pack_js(0)" value="普通压缩" type="button">
+		    <input class="btn btn-success" onclick="pack_js(1)" value="加密压缩" type="button">
+		    <input class="btn btn-info" onclick="Empty();" value="清空结果" type="button">
+		</div>
 	</div>
 	<div class="right_kuang">
 		<div class="right_main"></div>
@@ -108,5 +131,40 @@
 		
 	</div>
 </div>
+<script type="text/javascript">
+    function do_js_beautify() {
+        document.getElementById('beautify').disabled = true;
+        js_source = document.getElementById('content').value.replace(/^\s+/, '');
+        tabsize = document.getElementById('tabsize').value;
+        tabchar = ' ';
+        if (tabsize == 1) {
+            tabchar = '\t';
+        }
+        if (js_source && js_source.charAt(0) === '<') {
+            document.getElementById('content').value = style_html(js_source, tabsize, tabchar, 80);
+        } else {
+            document.getElementById('content').value = js_beautify(js_source, tabsize, tabchar);
+        }
+        document.getElementById('beautify').disabled = false;
+        return false;
+    }
+    function pack_js(base64) {
+        var input = document.getElementById('content').value;
+        var packer = new Packer;
+        if (base64) {
+            var output = packer.pack(input, 1, 0);
+        } else {
+            var output = packer.pack(input, 0, 0);
+        }
+        document.getElementById('content').value = output;
+    }
+    function Empty() {
+        document.getElementById('content').value = '';
+        document.getElementById('content').select();
+    }
+    function GetFocus() {
+        document.getElementById('content').focus();
+    }
+</script>
 </body>
 </html>
