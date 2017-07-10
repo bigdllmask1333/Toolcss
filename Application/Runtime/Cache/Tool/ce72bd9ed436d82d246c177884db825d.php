@@ -32,6 +32,7 @@
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
 	        <li><a href="#">编码/加密 <span class="sr-only">(current)</span></a></li>
+	        <li><a href="#">翻译 <span class="sr-only">(current)</span></a></li>
 	        <li>
 	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">网络 <span class="caret"></span></a>
 	        	<ul class="dropdown-menu">
@@ -97,7 +98,10 @@
 </div>
 	<!-- <p class="bg-warning msgs">...</p> -->
 	<div class="left_kuang">
-		<div class="left_main"></div>
+		<div class="left_main" style="text-align: center;">
+			<?php echo ($fanyi['trans_result'][0]['src']); ?>
+			<h1><?php echo ($fanyi['trans_result'][0]['dst']); ?></h1>
+		</div>
 	</div>
 	<div class="right_kuang">
 		<div class="right_main"></div>

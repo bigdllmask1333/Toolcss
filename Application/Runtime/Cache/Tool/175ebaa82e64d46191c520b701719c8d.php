@@ -35,6 +35,7 @@
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
 	        <li><a href="#">编码/加密 <span class="sr-only">(current)</span></a></li>
+	        <li><a href="#">翻译 <span class="sr-only">(current)</span></a></li>
 	        <li>
 	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">网络 <span class="caret"></span></a>
 	        	<ul class="dropdown-menu">
@@ -123,7 +124,9 @@
 		</div>
 	</div>
 	<div class="right_kuang">
-		<div class="right_main"></div>
+		<div class="right_main">
+			<img src="/Public/statics/self/images/psb.jpg" alt=""  style="width: 100%;height: 100%">
+		</div>
 		<div class="right_main"></div>
 		<div class="right_main"></div>
 	</div>
