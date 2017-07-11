@@ -17,7 +17,44 @@
 	<include file="Public/head" />
 	<!-- <p class="bg-warning msgs">...</p> -->
 	<div class="left_kuang">
-		<div class="left_main" style="text-align: center;"></div>
+		<div class="left_main" >
+			<div class="min-title">
+				<!-- <h1>Welcome to CssNb.com</h1> -->
+				<!-- <div class="alert alert-danger" role="alert alert-dismissible">Welcome to CssNb.com</div> -->
+				<div class="alert alert-danger alert-dismissible" role="alert">
+				  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				  <strong>Welcome to CssNb.com！</strong>
+				</div>
+			</div>
+			<div>
+				<form class="ns">
+					<p style="margin-top: 20px;">
+						<b><span  style="width: 90px;">当前时间戳：</span></b>
+						<span class="red" id="cur_timestamp" style="margin-right:30px;"></span>
+						<b><span id="change">  </span></b> 
+						<span class="green" id="cur_date"style="margin-left:30px;"></span>
+					</p>
+					<hr />
+			        <p>
+						<b><span  style="width: 80px;">时间戳：&nbsp;&nbsp;&nbsp;&nbsp;</span></b>
+						<input type="text" id="timestamp_1" alt="时间戳timestamp" title="时间戳timestamp" style="" value ="" />
+						<input type="button" onclick="gen(1);" class="form_button btn btn-danger" style="margin-left: 10px; width:80px;" value="转换" />
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<b><span  style="width: 80px;">北京时间：</span></b>
+						<input type="text" id="beijing_time_1" alt="时间戳转北京时间" title="时间戳转北京时间" style="" value ="" />
+					</p>
+					<hr />
+					<p>
+						<b><span  style="width: 80px;">北京时间：</span></b>
+						<input type="text" id="beijing_time_2" alt="时间戳转北京时间" title="时间戳转北京时间" style="" value ="" />
+						<input type="button" onclick="gen(2);" class="form_button btn btn-danger" style="margin-left: 10px; width:80px;" value="转换" />
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<b><span  style="width: 80px;">时间戳：</span></b>
+						<input type="text" id="timestamp_2" alt="时间戳timestamp" title="时间戳timestamp" style="" value ="" />
+					</p>
+				</form>
+			</div>
+		</div>
 	</div>
 	<div class="right_kuang">
 		<div class="right_main"></div>
@@ -28,5 +65,56 @@
 		
 	</div>
 </div>
+
+<script type="text/javascript">
+	//时间戳转化js代码
+	function $(id) {
+		return document.getElementById(id);
+	}
+	function task() {
+		var timestamp = new Date();
+		$('cur_timestamp').innerHTML = Math.round(timestamp / 1000);
+		$('cur_date').innerHTML = timestamp2date(timestamp);
+	}
+	function showTime(){
+		setInterval("task();",1000)
+	}
+	function timestamp2date(timestamp) {
+		var paddin =['00','01','02','03','04','05','06','07','08','09'];
+		var date = new Date(timestamp);
+		Y = date.getFullYear() + '-';
+		M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+		D = date.getDate();
+		if (D < 10) D = paddin[parseInt(D)];
+		D = D + ' ';
+		h = date.getHours() + ':';
+		m = date.getMinutes() + ':';
+		s = date.getSeconds(); 
+		if (s < 10) s = paddin[parseInt(s)];
+		return Y+M+D+h+m+s;
+	}
+	function gen(t) {
+		try {
+			if (t == 1) {
+				$('beijing_time_1').value = timestamp2date(parseInt($('timestamp_1').value) * 1000);
+			}
+			else {
+				$('timestamp_2').value = Math.round(Date.parse($('beijing_time_2').value) / 1000);
+			}
+		}
+		catch(err) {
+			alert('输入内容格式不合法！');
+		}
+		
+	}
+	task();
+	$('change').innerHTML = ' 实时转换 ';
+	showTime();
+
+	var timestamp = new Date();
+	$('timestamp_1').value = Math.round(timestamp / 1000);
+
+	$('beijing_time_2').value = timestamp2date(timestamp);
+</script>
 </body>
 </html>
