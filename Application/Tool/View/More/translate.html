@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<title>翻译-^(*￣(oo)￣)^</title>
+	<meta name="keywords" content="在线,CSS,CSS 校验,格式化,xml转json 工具,在线工具,json视图,可视化,程序,服务器,域名注册,正则表达式,测试,在线json格式化工具,json 格式化,json格式化工具,json字符串格式化,json 在线查看器,json在线,json 在线验证,json tools online,在线文字对比工具" />
+		<meta name="description" content="在线,CSS,CSS 校验,格式化,xml转json 工具,在线工具,json视图,可视化,程序,服务器,域名注册,正则表达式,测试,在线json格式化工具,json 格式化,json格式化工具,json字符串格式化,json 在线查看器,json在线,json 在线验证,json tools online,在线文字对比工具">
+	<script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/statics/layer/layer.js"></script>
+	<link href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	<script src="//cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/statics/self/css/main.css">
+	<!--<script src="http://7bv9ya.com1.z0.glb.clouddn.com/jquery.cookie.js"></script>-->
+</head>
+<body>
+	<include file="Public/head" more='active'/>
+	<!-- <p class="bg-warning msgs">...</p> -->
+	<div class="left_kuang">
+		<div class="left_main">
+			<div class="min-title">
+				<h1>百度翻译</h1>
+				<textarea class="fanyi form-control col-xs-12 col-sm-12 col-md-12 col-lg-12" rows="5" placeholder="请输入中文或者英文" id="firstdata"></textarea>
+				<textarea class="fanyi form-control col-xs-12 col-sm-12 col-md-12 col-lg-12" rows="5" id="lastdata"></textarea>
+			    <!-- <h3>请在下框输入您要转换的内容:</h3>   -->
+			    <button class="btn btn-info buttonstyle"  id="fanyis1">Let`s Go</button>
+			</div>
+		<!-- 	{$fanyi['trans_result'][0]['src']}
+			<h1>{$fanyi['trans_result'][0]['dst']}</h1> -->
+		</div>
+	</div>
+	<div class="right_kuang">
+		<div class="right_main"></div>
+		<div class="right_main"></div>
+		<div class="right_main"></div>
+	</div>
+	<div class="buttons">
+		
+	</div>
+	<script type="text/javascript">
+				$('#fanyis1').click(function(){
+					var datas=$('#firstdata').val();
+					if (datas=='') {
+						layer.msg('请输入内容', function(){
+						//关闭后的操作
+						});
+					}	
+					$.ajax( {  
+				        url:'translate',// 跳转到 action  
+				        data:{query : datas,},  
+				        type:'post',  
+				        cache:false,  
+				        dataType:'json',  
+				        success:function(data) {  
+				            if(data.msg =="true" ){  
+				                $('#lastdata').val(data.content);
+				            }else{  
+				            	layer.msg('无法翻译', function(){
+									//关闭后的操作
+								  });
+				            }  
+				         },  
+				         error : function() {  
+				              layer.msg('异常', function(){
+								//关闭后的操作
+							  });
+				         }  
+				    });
+				})
+			// })
+	</script>
+</body>
+</html>

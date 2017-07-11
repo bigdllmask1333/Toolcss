@@ -8,6 +8,7 @@
     height: 50px;
     border-bottom:1px solid #CFCFCF;
     margin-bottom: 5px;
+    text-align: center;
 }
 .left_main{
 	width: 100%;
@@ -63,4 +64,14 @@
     width: 100%;
     height: 420px;
     outline:none;
+}
+.fanyi{
+    margin-top: 10px;
+}
+.buttonstyle{
+    margin-top: 10px;
+    width: 200px;
+}
+.julid{
+    margin-top: 20px;
 }

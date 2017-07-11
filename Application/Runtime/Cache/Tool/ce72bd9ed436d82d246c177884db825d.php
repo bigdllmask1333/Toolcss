@@ -32,7 +32,7 @@
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
 	        <li><a href="#">编码/加密 <span class="sr-only">(current)</span></a></li>
-	        <li><a href="#">翻译 <span class="sr-only">(current)</span></a></li>
+	        <!-- <li><a href="#">翻译 <span class="sr-only">(current)</span></a></li> -->
 	        <li>
 	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">网络 <span class="caret"></span></a>
 	        	<ul class="dropdown-menu">
@@ -81,14 +81,14 @@
 		            <li><a href="https://docs.open.alipay.com/399" target="_blank">支付宝开发商文档</a></li>
 		        </ul>
 	        </li>
-	        <li class="dropdown">
+	        <li class="dropdown [more]">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多	 <span class="caret"></span></a>
 	           <ul class="dropdown-menu">
 		            <li><a href="#">Action</a></li>
 		            <li><a href="#">Another action</a></li>
 		            <li><a href="#">Something else here</a></li>
 		            <li role="separator" class="divider"></li>
-		            <li><a href="#">Separated link</a></li>
+		            <li><a href="<?php echo U('Tool/more/fanyimi');?>">英汉互译</a></li>
 		        </ul>
 	        </li>
 	      </ul>
@@ -98,10 +98,7 @@
 </div>
 	<!-- <p class="bg-warning msgs">...</p> -->
 	<div class="left_kuang">
-		<div class="left_main" style="text-align: center;">
-			<?php echo ($fanyi['trans_result'][0]['src']); ?>
-			<h1><?php echo ($fanyi['trans_result'][0]['dst']); ?></h1>
-		</div>
+		<div class="left_main" style="text-align: center;"></div>
 	</div>
 	<div class="right_kuang">
 		<div class="right_main"></div>

@@ -3,20 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
-	<title>工具界-CssNb</title>
+	<title>翻译-^(*￣(oo)￣)^</title>
 	<meta name="keywords" content="在线,CSS,CSS 校验,格式化,xml转json 工具,在线工具,json视图,可视化,程序,服务器,域名注册,正则表达式,测试,在线json格式化工具,json 格式化,json格式化工具,json字符串格式化,json 在线查看器,json在线,json 在线验证,json tools online,在线文字对比工具" />
 		<meta name="description" content="在线,CSS,CSS 校验,格式化,xml转json 工具,在线工具,json视图,可视化,程序,服务器,域名注册,正则表达式,测试,在线json格式化工具,json 格式化,json格式化工具,json字符串格式化,json 在线查看器,json在线,json 在线验证,json tools online,在线文字对比工具">
 	<script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/Public/statics/layer/layer.js"></script>
 	<link href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 	<script src="//cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="/Public/statics/self/css/main.css">
-	<script type="text/javascript" src="/Public/statics/format/jshtml/base.js"></script>
-	<script type="text/javascript" src="/Public/statics/format/jshtml/htmlformat.js"></script>
-	<script type="text/javascript" src="/Public/statics/format/jshtml/jsformat.js"></script>
 	<!--<script src="http://7bv9ya.com1.z0.glb.clouddn.com/jquery.cookie.js"></script>-->
 </head>
 <body>
-<div class="container-fluid">
 	<div class="navs">
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
@@ -47,7 +44,7 @@
 		        	<li><a href="#">TCP/IP子网掩码计算换算</a></li>
 	        	</ul>
         	</li>
-	        <li    class="dropdown active">
+	        <li    class="dropdown [keywords]">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">格式化 <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
 	            <li><a href="<?php echo U('Tool/format/jshtml_format');?>">Javascript/HTML压缩、格式化</a></li>
@@ -84,14 +81,14 @@
 		            <li><a href="https://docs.open.alipay.com/399" target="_blank">支付宝开发商文档</a></li>
 		        </ul>
 	        </li>
-	        <li class="dropdown">
+	        <li class="dropdown active">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多	 <span class="caret"></span></a>
 	           <ul class="dropdown-menu">
 		            <li><a href="#">Action</a></li>
 		            <li><a href="#">Another action</a></li>
 		            <li><a href="#">Something else here</a></li>
 		            <li role="separator" class="divider"></li>
-		            <li><a href="<?php echo U('Tool/more/translate');?>">英汉互译</a></li>
+		            <li><a href="<?php echo U('Tool/more/fanyimi');?>">英汉互译</a></li>
 		        </ul>
 	        </li>
 	      </ul>
@@ -102,72 +99,67 @@
 	<!-- <p class="bg-warning msgs">...</p> -->
 	<div class="left_kuang">
 		<div class="left_main">
-			<div class="min-title">
-				<h1>JS/HTML格式化工具</h1>
-			    <!-- <h3>请在下框输入您要转换的内容:</h3>   -->
+			<div class="min-title" style="text-align: center;">
+				<h1>百度翻译</h1>
+				<form class="form-inline">
+				 <!--  <div class="form-group">
+				    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+				    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+				  </div> -->
+				  <div class="form-group julid">
+				    <label class="sr-only" for="exampleInputPassword3">Password</label>
+				    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+				  </div>
+				  <br>
+			      <button class="btn btn-info buttonstyle" id="varcher" type="button">Let`s Go</button>
+				</form>
 			</div>
-		    <textarea class="format_edit" id="content" name="content">/*   粘贴你代码到这里并点击格式化按钮   */
-		/*   例如格式化以下这段代码   */
-		if('this_is'==/an_example/){do_something();}else{var a=b?(c%d):e[f];}
-		    </textarea>
-			<br>
-		    <select id="tabsize" name="tabsize" class="form-control" style="width:120px;float: left;">
-			    <option value="1" selected="selected">制表符缩进</option>
-			    <option value="2">2个空格缩进</option>
-			    <option value="4">4个空格缩进</option>
-			    <option value="8">8个空格缩进</option>
-		    </select>
-		    <input id="beautify" class="btn btn-danger" onclick="return do_js_beautify()" value="格式化代码" type="button">
-		    <input class="btn btn-primary" onclick="pack_js(0)" value="普通压缩" type="button">
-		    <input class="btn btn-success" onclick="pack_js(1)" value="加密压缩" type="button">
-		    <input class="btn btn-info" onclick="Empty();" value="清空结果" type="button">
+		<!-- 	<?php echo ($fanyi['trans_result'][0]['src']); ?>
+			<h1><?php echo ($fanyi['trans_result'][0]['dst']); ?></h1> -->
 		</div>
 	</div>
 	<div class="right_kuang">
-		<div class="right_main">
-			<img src="/Public/statics/self/images/psb.jpg" alt=""  style="width: 100%;height: 100%">
-		</div>
+		<div class="right_main"></div>
 		<div class="right_main"></div>
 		<div class="right_main"></div>
 	</div>
 	<div class="buttons">
 		
 	</div>
-</div>
-<script type="text/javascript">
-    function do_js_beautify() {
-        document.getElementById('beautify').disabled = true;
-        js_source = document.getElementById('content').value.replace(/^\s+/, '');
-        tabsize = document.getElementById('tabsize').value;
-        tabchar = ' ';
-        if (tabsize == 1) {
-            tabchar = '\t';
-        }
-        if (js_source && js_source.charAt(0) === '<') {
-            document.getElementById('content').value = style_html(js_source, tabsize, tabchar, 80);
-        } else {
-            document.getElementById('content').value = js_beautify(js_source, tabsize, tabchar);
-        }
-        document.getElementById('beautify').disabled = false;
-        return false;
-    }
-    function pack_js(base64) {
-        var input = document.getElementById('content').value;
-        var packer = new Packer;
-        if (base64) {
-            var output = packer.pack(input, 1, 0);
-        } else {
-            var output = packer.pack(input, 0, 0);
-        }
-        document.getElementById('content').value = output;
-    }
-    function Empty() {
-        document.getElementById('content').value = '';
-        document.getElementById('content').select();
-    }
-    function GetFocus() {
-        document.getElementById('content').focus();
-    }
-</script>
+	<script type="text/javascript">
+				$('#varcher').click(function(){
+					var datas=$('#exampleInputPassword3').val();
+					if (datas=='') {
+						layer.msg('请输入密码', function(){
+						//关闭后的操作
+						});
+					}	
+					$.ajax( {  
+				        url:'fanyimi',// 跳转到 action  
+				        data:{psd : datas,},  
+				        type:'post',  
+				        cache:false,  
+				        dataType:'json',  
+				        success:function(data) {  
+				            if(data.msg =="true" ){  
+				                layer.msg('验证通过', function(){
+									//关闭后的操作
+								  });
+				                window.location.href="translate"; 
+				            }else{  
+				            	layer.msg('密码错误', function(){
+									//关闭后的操作
+								  });
+				            }  
+				         },  
+				         error : function() {  
+				              layer.msg('异常', function(){
+								//关闭后的操作
+							  });
+				         }  
+				    });
+				})
+			// })
+	</script>
 </body>
 </html>
