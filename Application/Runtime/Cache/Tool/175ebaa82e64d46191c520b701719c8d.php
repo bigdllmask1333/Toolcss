@@ -51,7 +51,7 @@
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">格式化 <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
 	            <li><a href="<?php echo U('Tool/format/jshtml_format');?>">Javascript/HTML压缩、格式化</a></li>
-	            <li><a href="#">CSS压缩、格式化</a></li>
+	            <li><a href="<?php echo U('Tool/format/csszip');?>">CSS压缩、格式化</a></li>
 	            <li><a href="#">XML压缩、格式化</a></li>
 	            <li role="separator" class="divider"></li>
 	            <li><a href="#">SQL压缩、格式化</a></li>
@@ -84,14 +84,14 @@
 		            <li><a href="https://docs.open.alipay.com/399" target="_blank">支付宝开发商文档</a></li>
 		        </ul>
 	        </li>
-	        <li class="dropdown">
+	        <li class="dropdown [more]">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多	 <span class="caret"></span></a>
 	           <ul class="dropdown-menu">
 		            <li><a href="#">Action</a></li>
 		            <li><a href="#">Another action</a></li>
 		            <li><a href="#">Something else here</a></li>
 		            <li role="separator" class="divider"></li>
-		            <li><a href="<?php echo U('Tool/more/translate');?>">英汉互译</a></li>
+		            <li><a href="<?php echo U('Tool/more/fanyimi');?>">英汉互译</a></li>
 		        </ul>
 	        </li>
 	      </ul>
@@ -125,7 +125,7 @@
 	</div>
 	<div class="right_kuang">
 		<div class="right_main">
-			<img src="/Public/statics/self/images/psb.jpg" alt=""  style="width: 100%;height: 100%">
+			<!-- <img src="/Public/statics/self/images/psb.jpg" alt=""  style="width: 100%;height: 100%"> -->
 		</div>
 		<div class="right_main"></div>
 		<div class="right_main"></div>

@@ -48,7 +48,7 @@
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">格式化 <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
 	            <li><a href="<?php echo U('Tool/format/jshtml_format');?>">Javascript/HTML压缩、格式化</a></li>
-	            <li><a href="#">CSS压缩、格式化</a></li>
+	            <li><a href="<?php echo U('Tool/format/csszip');?>">CSS压缩、格式化</a></li>
 	            <li><a href="#">XML压缩、格式化</a></li>
 	            <li role="separator" class="divider"></li>
 	            <li><a href="#">SQL压缩、格式化</a></li>

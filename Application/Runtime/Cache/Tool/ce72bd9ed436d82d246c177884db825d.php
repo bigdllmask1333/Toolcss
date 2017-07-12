@@ -48,10 +48,11 @@
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">格式化 <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
 	            <li><a href="<?php echo U('Tool/format/jshtml_format');?>">Javascript/HTML压缩、格式化</a></li>
-	            <li><a href="#">CSS压缩、格式化</a></li>
+	            <li><a href="<?php echo U('Tool/format/csszip');?>">CSS压缩、格式化</a></li>
 	            <li><a href="#">XML压缩、格式化</a></li>
 	            <li role="separator" class="divider"></li>
 	            <li><a href="#">SQL压缩、格式化</a></li>
+	            <li><a href="<?php echo U('Tool/format/jsons');?>">JSON 在线解析工具</a></li>
 <!-- 		            <li role="separator" class="divider"></li>
 	            <li><a href="#">One more separated link</a></li> -->
 	          </ul>
@@ -79,6 +80,8 @@
 		            <li><a href="http://open.taobao.com/doc2/apiList.htm" target="_blank">淘宝开发文档</a></li>
 		            <li><a href="https://doc.open.alipay.com/doc2/alipayDocIndex.htm" target="_blank">支付宝开发文档</a></li>
 		            <li><a href="https://docs.open.alipay.com/399" target="_blank">支付宝开发商文档</a></li>
+		             <li role="separator" class="divider"></li>
+		            <li><a href="http://www.runoob.com/try/bootstrap/layoutit/" target="_blank">Bootstrap可视化布局</a></li>
 		        </ul>
 	        </li>
 	        <li class="dropdown [more]">
