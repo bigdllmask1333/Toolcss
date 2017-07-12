@@ -49,9 +49,9 @@
 	          <ul class="dropdown-menu">
 	            <li><a href="<?php echo U('Tool/format/jshtml_format');?>">Javascript/HTML压缩、格式化</a></li>
 	            <li><a href="<?php echo U('Tool/format/csszip');?>">CSS压缩、格式化</a></li>
-	            <li><a href="#">XML压缩、格式化</a></li>
+	            <li><a href="<?php echo U('Tool/format/xmlzip');?>">XML压缩、格式化</a></li>
 	            <li role="separator" class="divider"></li>
-	            <li><a href="#">SQL压缩、格式化</a></li>
+	            <!-- <li><a href="#">SQL压缩、格式化</a></li> -->
 	            <li><a href="<?php echo U('Tool/format/jsons');?>">JSON 在线解析工具</a></li>
 <!-- 		            <li role="separator" class="divider"></li>
 	            <li><a href="#">One more separated link</a></li> -->
@@ -141,10 +141,10 @@
 		</div>
 	</div>
 	<div class="right_kuang">
-		<div class="right_main"></div>
-		<div class="right_main"></div>
-		<div class="right_main"></div>
-	</div>
+	<div class="right_main"><!-- <img src="/Public/statics/self/images/psb.jpg" alt=""  style="width: 100%;height: 100%"> --></div>
+	<div class="right_main"></div>
+	<div class="right_main"></div>
+</div>
 	<div class="buttons">
 		
 	</div>

@@ -16,4 +16,9 @@ class FormatController extends Controller {
     	$this->display();
     }
 
+    //xml格式化工具 
+    public function xmlzip(){
+        $this->display();
+    }
+
 }
