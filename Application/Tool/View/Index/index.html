@@ -53,13 +53,15 @@
 						<input type="text" id="timestamp_2" alt="时间戳timestamp" title="时间戳timestamp" style="" value ="" />
 					</p>
 				</form>
+				<hr>
+				<div class="bs-callout bs-callout-danger" id="callout-progress-animation-css3">
+				    <div class="alert alert-success" role="alert">IP:{$ipmsg['ip']} &nbsp;&nbsp;地区：{$ipmsg['area']}&nbsp;&nbsp;类型：{$ipmsg['location']}</div>
+				</div>
 			</div>
 		</div>
 	</div>
-	<include file="Public/left_box" keywords='active'/>
-	<div class="buttons">
-		
-	</div>
+	<include file="Public/right_box" keywords='active'/>
+	<include file="Public/button" keywords='active'/>
 </div>
 
 <script type="text/javascript">

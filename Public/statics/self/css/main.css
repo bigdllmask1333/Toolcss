@@ -43,6 +43,35 @@
     -webkit-border-bottom-right-radius: 10px 10px ;
     -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3)
 }
+.right_main_min{
+    width:100%;
+    float: right;
+    margin: 5px auto;
+    
+    min-height:118px;
+    padding: 10px;
+    position:relative;
+    background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#fff), to(#f3f3f3), color-stop(.1,#fff));
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    -webkit-border-top-left-radius: 10px 10px;
+    -webkit-border-top-right-radius: 10px 10px;
+    -webkit-border-bottom-left-radius: 10px 10px ;
+    -webkit-border-bottom-right-radius: 10px 10px ;
+    -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3)
+}
+.button_main{
+    width:80%;
+    float: left;
+    margin: 5px auto;
+    margin-left: 10%;
+    min-height:40px;
+}
+.button_main a{color:#EE6A50}
+.yinyin{
+        -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3)
+}
 .msgs{
 	width:80%;
 	margin:0 auto;

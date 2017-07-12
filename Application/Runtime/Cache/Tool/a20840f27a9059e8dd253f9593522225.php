@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
-	<title>JSON 在线解析工具-^(*￣(oo)￣)^</title>
+	<title>CSS压缩-^(*￣(oo)￣)^</title>
 	<meta name="keywords" content="在线,CSS,CSS 校验,格式化,xml转json 工具,在线工具,json视图,可视化,程序,服务器,域名注册,正则表达式,测试,在线json格式化工具,json 格式化,json格式化工具,json字符串格式化,json 在线查看器,json在线,json 在线验证,json tools online,在线文字对比工具" />
 		<meta name="description" content="在线,CSS,CSS 校验,格式化,xml转json 工具,在线工具,json视图,可视化,程序,服务器,域名注册,正则表达式,测试,在线json格式化工具,json 格式化,json格式化工具,json字符串格式化,json 在线查看器,json在线,json 在线验证,json tools online,在线文字对比工具">
 	<script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
@@ -102,11 +102,58 @@
 </div>
 	<!-- <p class="bg-warning msgs">...</p> -->
 	<div class="left_kuang">
-		<div class="left_main" style="height: 600px;">
+		<div class="left_main">
 			<div class="min-title"	>
-				<h1>JSON 在线解析 格式化工具</h1>
+				<h1>XML压缩/格式化工具</h1>
 			</div>
-			<iframe src="http://cssnb.com/iframe/jsoniframe/front53.html" style="width: 100%;height:85%;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"></iframe>
+			<div class="container-fluid">
+		      <!-- container-fluid -->
+		      <div class="row">
+		        <div class="col-md-9">
+		          <span class="jbTestPos" id="advtop">
+		          </span>
+		          <!-- Nav tabs -->
+		          <!-- Tab panes -->
+		          <div class="tab-content">
+		            <div class="tab-pane active" id="home">
+		              <p>
+		              </p>
+		              <form role="form" onsubmit="return false;">
+		                <div class="form-group">
+		                  <label class="sr-only" for="code"></label>
+		                  <textarea class="form-control" rows="8" placeholder="待压缩、格式化的CSS代码" id="code">
+		                  </textarea>
+		                </div>
+		                <div class="form-group">
+		                  <button type="submit" class="btn btn-primary" onclick="pack()">
+		                    转为数组
+		                  </button>
+		                  <button type="submit" class="btn btn-danger" onclick="pack()">
+		                    转为XML
+		                  </button>
+		                  <button type="submit" class="btn btn-info" onclick="packNor()">
+		                    普通压缩
+		                  </button>
+		                  <button type="submit" class="btn btn-warning" onclick="format()">
+		                    格式化
+		                  </button>
+		                </div>
+		                <div class="form-group">
+		                  <label class="sr-only" for="packer"></label>
+		                  <textarea class="form-control" rows="8" placeholder="处理后的CSS代码" id="packer">
+		                  </textarea>
+		                </div>
+		              </form>
+		              <script type="text/javascript">
+		                
+		              </script>
+		            </div>
+
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+			
 		</div>
 	</div>
 	<div class="right_kuang" >

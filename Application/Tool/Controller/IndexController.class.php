@@ -1,13 +1,19 @@
 <?php
 namespace Tool\Controller;
 use Think\Controller;
-use Common\Fanyi\Fanyi;
+use Common\Juheip\Ip;
 class IndexController extends Controller {
     public function index(){
-    	import('Common.Fanyi.Fanyi');
-		$object = new Fanyi();
-    	$content=$object->translate('我爱你', 'auto', 'en');
-    	$this->assign('fanyi',$content);
+    	import('Common.Juheip.Ip');
+		$object = new Ip();
+		$ip=get_client_ip();
+    	$content=$object->Ip_area($ip);
+    	$ipmsg=[
+    		'ip'=>$ip,
+    		'area'=>$content['result']['area'],
+    		'location'=>$content['result']['location'],
+    	];
+    	$this->assign('ipmsg',$ipmsg);
         $this->display();
     }
 }
