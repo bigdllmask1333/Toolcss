@@ -1548,3 +1548,21 @@ function think_filter(&$value){
 function in_array_case($value,$array){
     return in_array(strtolower($value),array_map('strtolower',$array));
 }
+
+
+
+//实时热点
+function news(){
+    $url = 'http://tuijian.hao123.com/?type=hotrank';
+    // $contents1 = file_get_contents($url);
+    $contents1 = file_get_contents("compress.zlib://".$url);   //规避中文乱码的现象
+    // $contents1 = iconv("gb2312", "utf-8//IGNORE",$contents);    //中文乱码关键
+    $isMatched1 = preg_match_all('#<div class="points">(.*)<div class="top top-blue" monkey="jr">#isU', $contents1, $matches1);  //preg_match_all('#需要匹配的内容#isU', $contents1, $matches1);
+    // var_dump($matches1[0][0]);
+    $isMatched2 = preg_match_all('#<span class="point-title">(.*)</span>#isU',$matches1[0][0],$matches2);
+    // echo ($matches2[0][0]);
+    $isMatched3 = preg_match_all('#<span class="point-index">(.*)</span>#isU',$matches1[0][0],$matches3);
+    $data['content']=$matches2[1];
+    $data['num']=$matches3[1];
+    return $data;
+}

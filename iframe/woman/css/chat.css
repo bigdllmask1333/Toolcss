@@ -1,0 +1,108 @@
+﻿#container {
+height: 530px;   
+margin: 0;
+}  
+::-webkit-scrollbar {
+ width:8px;
+ height:8px;
+ background:#ccc;
+}
+::-webkit-scrollbar-button {
+ display:none;
+}
+::-webkit-scrollbar-track-piece {
+ display:none;
+}
+::-webkit-scrollbar-thumb {
+ background:#999;
+}
+.winchat{
+width: 500px;
+margin: 0 auto;
+}
+.footermiku {   
+margin: 0;
+width: 468px;   
+height: 50px;   
+position: absolute;   
+bottom: 10px;   
+padding: 10px;   
+border-top: 2px solid #ccc;
+}   
+.contentsasa{
+font-size: 20px;   
+height: 465px;   
+overflow: auto;   
+padding: 5px;   
+}
+.spanright:before{
+	z-index: 1;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #4fa1d2;
+    border-left: 1px solid #eee;
+    border-top: 1px solid #eee;
+    display: inline-block;
+    right: -6px;
+    pointer-events: none;
+    position: absolute;
+    transform: rotate(135deg);
+}
+.spanleft:before{
+	z-index: 1;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    display: inline-block;
+    left: -6px;
+    pointer-events: none;
+    position: absolute;
+    transform: rotate(135deg);
+}
+.contentsasa li {   
+margin-top: 10px;   
+padding-left: 10px;  
+padding-right: 10px; 
+clear: both;   
+overflow: hidden;   
+}   
+.contentsasa li img {  
+cursor: pointer; 
+float: left;   
+width: 40px;
+border: 1px solid #39c;
+}   
+.contentsasa li span{   
+background: #3399CC;   
+padding: 10px;   
+border-radius: 10px;   
+float: left;   
+margin: 6px 10px 0 10px;   
+max-width: 307px;   
+border: 1px solid #eee;   
+box-shadow: 0 0 3px #eee;   
+}   
+.contentsasa li img.imgleft {    
+float: left;    
+border-radius: 50%;
+}   
+.contentsasa li img.imgright {    
+float: right;    
+border-radius: 50%;
+}   
+.contentsasa li span.spanleft {    
+	position: relative;
+float: left;   
+background: rgba(255, 255, 255, 0.8);   
+}   
+.contentsasa li span.spanright {    
+	position: relative;
+float: right;   
+background: rgba(35, 137, 199, 0.8);
+color: #fff;
+word-break: break-all;word-wrap: break-word; 
+}  

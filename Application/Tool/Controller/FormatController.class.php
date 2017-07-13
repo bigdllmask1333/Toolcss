@@ -2,6 +2,12 @@
 namespace Tool\Controller;
 use Think\Controller;
 class FormatController extends Controller {
+    public function __construct() {
+        parent::__construct();
+        $news=news();
+        $this->assign('news',$news);        
+
+    }
 	// jshtml格式化压缩
     public function jshtml_format(){
         $this->display();

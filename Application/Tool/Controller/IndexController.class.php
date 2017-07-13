@@ -3,6 +3,12 @@ namespace Tool\Controller;
 use Think\Controller;
 use Common\Juheip\Ip;
 class IndexController extends Controller {
+    public function __construct() {
+        parent::__construct();
+        $news=news();
+        $this->assign('news',$news);        
+
+    }
     public function index(){
     	import('Common.Juheip.Ip');
 		$object = new Ip();

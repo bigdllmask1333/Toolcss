@@ -1,0 +1,38 @@
+﻿@charset "utf-8";
+
+.miku {
+	display:block;
+	width:201px;
+	height:260px;
+	position:absolute;
+	top: 50px;
+	left: 160px;
+	z-index:9999;
+}
+#messages{
+	color :#fff;
+	border: 1px solid #c4c4c4;
+	background:#3399CC;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	min-height:1em;
+	padding:5px;
+	top:-50px;
+	position:absolute;
+	text-align:center;
+	width:auto !important;
+	z-index:10000;
+	-moz-box-shadow:0 0 15px #eeeeee;
+	-webkit-box-shadow:0 0 15px #eeeeee;
+	border-color:#eeeeee;
+	box-shadow:0 0 15px #eeeeee;
+	outline:none;
+}
+.mumu{
+	width:201px;
+	height:260px;
+	cursor: move;
+	background:url(../images/miku1.gif) no-repeat;
+	background-size: contain
+}

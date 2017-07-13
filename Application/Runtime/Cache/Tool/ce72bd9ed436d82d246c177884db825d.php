@@ -7,8 +7,9 @@
 	<meta name="keywords" content="在线,CSS,CSS 校验,格式化,xml转json 工具,在线工具,json视图,可视化,程序,服务器,域名注册,正则表达式,测试,在线json格式化工具,json 格式化,json格式化工具,json字符串格式化,json 在线查看器,json在线,json 在线验证,json tools online,在线文字对比工具" />
 		<meta name="description" content="在线,CSS,CSS 校验,格式化,xml转json 工具,在线工具,json视图,可视化,程序,服务器,域名注册,正则表达式,测试,在线json格式化工具,json 格式化,json格式化工具,json字符串格式化,json 在线查看器,json在线,json 在线验证,json tools online,在线文字对比工具">
 	<script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
-	<link href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 	<script src="//cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<link href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	<script src="/Public/statics/layer/layer.js"></script>
 	<link rel="stylesheet" type="text/css" href="/Public/statics/self/css/main.css">
 	<!--<script src="http://7bv9ya.com1.z0.glb.clouddn.com/jquery.cookie.js"></script>-->
 </head>
@@ -16,6 +17,7 @@
 <div class="container-fluid">
 	<div class="navs">
 	<nav class="navbar navbar-default">
+	<!-- <nav class="navbar navbar-inverse">   黑色 --> 
 	  <div class="container-fluid">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
@@ -94,6 +96,7 @@
 		            <li><a href="<?php echo U('Tool/more/fanyimi');?>">英汉互译</a></li>
 		        </ul>
 	        </li>
+	        <li><a href="http://cssnb.com/iframe/woman/chatwoman.html" target="_blank">美人儿<span class="sr-only">(current)</span></a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
@@ -122,7 +125,7 @@
 			        <p>
 						<b><span  style="width: 80px;">时间戳：&nbsp;&nbsp;&nbsp;&nbsp;</span></b>
 						<input type="text" id="timestamp_1" alt="时间戳timestamp" title="时间戳timestamp" style="" value ="" />
-						<input type="button" onclick="gen(1);" class="form_button btn btn-danger" style="margin-left: 10px; width:80px;" value="转换" />
+						<input type="button" onclick="gens(1);" class="form_button btn btn-danger" style="margin-left: 10px; width:80px;" value="转换" />
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						<b><span  style="width: 80px;">北京时间：</span></b>
 						<input type="text" id="beijing_time_1" alt="时间戳转北京时间" title="时间戳转北京时间" style="" value ="" />
@@ -131,7 +134,7 @@
 					<p>
 						<b><span  style="width: 80px;">北京时间：</span></b>
 						<input type="text" id="beijing_time_2" alt="时间戳转北京时间" title="时间戳转北京时间" style="" value ="" />
-						<input type="button" onclick="gen(2);" class="form_button btn btn-danger" style="margin-left: 10px; width:80px;" value="转换" />
+						<input type="button" onclick="gens(2);" class="form_button btn btn-danger" style="margin-left: 10px; width:80px;" value="转换" />
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						<b><span  style="width: 80px;">时间戳：</span></b>
 						<input type="text" id="timestamp_2" alt="时间戳timestamp" title="时间戳timestamp" style="" value ="" />
@@ -157,7 +160,14 @@
 	</div> 
 	<div class="right_main">
 		
-		<div class="panel-heading"><h3 class="widget-title panel-title">最新留言</h3></div>	
+		<div class="panel-heading"><h3 class="widget-title panel-title">实时热点<span style="float:right;font-size: 10px;margin-top: 10px">搜索指数</span></h3></div>
+		<ul class="list-group">
+		    <li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][1]); ?><span style="float:right"><?php echo ($news['num'][1]); ?>次</span></li>
+			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][2]); ?><span style="float:right"><?php echo ($news['num'][2]); ?>次</span></li>
+			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][3]); ?><span style="float:right"><?php echo ($news['num'][3]); ?>次</span></li>
+			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][4]); ?><span style="float:right"><?php echo ($news['num'][4]); ?>次</span></li>
+			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][5]); ?><span style="float:right"><?php echo ($news['num'][5]); ?>次</span></li>
+		</ul>
 
 	</div>
 	<div class="right_main_min">
@@ -221,8 +231,8 @@
 	}
 	function task() {
 		var timestamp = new Date();
-		$('cur_timestamp').innerHTML = Math.round(timestamp / 1000);
-		$('cur_date').innerHTML = timestamp2date(timestamp);
+		document.getElementById('cur_timestamp').innerHTML = Math.round(timestamp / 1000);
+		document.getElementById('cur_date').innerHTML = timestamp2date(timestamp);
 	}
 	function showTime(){
 		setInterval("task();",1000)
@@ -241,13 +251,14 @@
 		if (s < 10) s = paddin[parseInt(s)];
 		return Y+M+D+h+m+s;
 	}
-	function gen(t) {
+	function gens(t) {
 		try {
 			if (t == 1) {
-				$('beijing_time_1').value = timestamp2date(parseInt($('timestamp_1').value) * 1000);
+				console.log((document.getElementById('timestamp_1').value));
+				document.getElementById('beijing_time_1').value = timestamp2date(parseInt(document.getElementById('timestamp_1').value) * 1000);
 			}
 			else {
-				$('timestamp_2').value = Math.round(Date.parse($('beijing_time_2').value) / 1000);
+				document.getElementById('timestamp_2').value = Math.round(Date.parse(document.getElementById('beijing_time_2').value) / 1000);
 			}
 		}
 		catch(err) {
@@ -256,13 +267,13 @@
 		
 	}
 	task();
-	$('change').innerHTML = ' 实时转换 ';
+	document.getElementById('change').innerHTML = ' 实时转换 ';
 	showTime();
 
 	var timestamp = new Date();
-	$('timestamp_1').value = Math.round(timestamp / 1000);
+	document.getElementById('timestamp_1').value = Math.round(timestamp / 1000);
 
-	$('beijing_time_2').value = timestamp2date(timestamp);
+	document.getElementById('beijing_time_2').value = timestamp2date(timestamp);
 </script>
 </body>
 </html>

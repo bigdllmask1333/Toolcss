@@ -3,6 +3,12 @@ namespace Tool\Controller;
 use Think\Controller;
 use Common\Fanyi\Fanyi;
 class MoreController extends Controller {
+    public function __construct() {
+        parent::__construct();
+        $news=news();
+        $this->assign('news',$news);        
+
+    }
     public function translate(){
     	// dump($_SESSION['yanzheng']);
     	// session('yanzheng',null);
