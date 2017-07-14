@@ -54,4 +54,13 @@ class MoreController extends Controller {
     	}
     	$this->display();
     }
+    //字数
+    public function zishu(){
+        $this->display();
+    }
+
+     //字数
+    public function quc(){
+        $this->display();
+    }
 }

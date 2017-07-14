@@ -22,4 +22,7 @@ class IndexController extends Controller {
     	$this->assign('ipmsg',$ipmsg);
         $this->display();
     }
+    public function twoma(){
+        $this->display();
+    }
 }

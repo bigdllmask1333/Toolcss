@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<title>工具界-CssNb</title>
+	<meta name="keywords" content="在线,CSS,CSS 校验,格式化,xml转json 工具,在线工具,json视图,可视化,程序,服务器,域名注册,正则表达式,测试,在线json格式化工具,json 格式化,json格式化工具,json字符串格式化,json 在线查看器,json在线,json 在线验证,json tools online,在线文字对比工具" />
+		<meta name="description" content="在线,CSS,CSS 校验,格式化,xml转json 工具,在线工具,json视图,可视化,程序,服务器,域名注册,正则表达式,测试,在线json格式化工具,json 格式化,json格式化工具,json字符串格式化,json 在线查看器,json在线,json 在线验证,json tools online,在线文字对比工具">
+	<script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+	<link href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	<script src="//cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/statics/self/css/main.css">
+	<script type="text/javascript" src="__PUBLIC__/statics/format/jshtml/base.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/statics/format/jshtml/htmlformat.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/statics/format/jshtml/jsformat.js"></script>
+	<!--<script src="http://7bv9ya.com1.z0.glb.clouddn.com/jquery.cookie.js"></script>-->
+</head>
+<body>
+<div class="container-fluid">
+	<include file="Public/head" mi="active"/>
+	<!-- <p class="bg-warning msgs">...</p> -->
+	<div class="left_kuang">
+		<div class="left_main">
+			<div class="min-title">
+				<h1>Escape加密/解密工具</h1>
+			    <!-- <h3>请在下框输入您要转换的内容:</h3>   -->
+			</div>
+			<!-- /工具开始 -->
+		    <h3>请输入欲加密的字符串：</h3>
+		    <textarea id="ipt" class="toolarea form-control"   rows="8" style="margin-top:40px;margin-bottom: 20px;">大家好</textarea>
+		    <input type="button" class="bt-green btn btn-primary" onclick="jQuery(&#39;#ipt&#39;).val(escape(jQuery(&#39;#ipt&#39;).val()));" value="Escape加密">
+		    <input type="button" class="bt-blue btn btn-danger" onclick="jQuery(&#39;#ipt&#39;).val(unescape(jQuery(&#39;#ipt&#39;).val()));" value="UnEscape解密">
+
+		    <p><br />小贴士：可多次加密和解密。 Escape采用ISO Latin字符集对指定的字符串进行编码。所有的空格符、标点符号、特殊字符以及其他非ASCII字符都将被转化成%xx格式的字符编码(xx等于该字符在字符集表里面的编码的16进制数字)。</p>
+
+    		<!-- /工具结束 -->
+		  
+		</div>
+	</div>
+	<include file="Public/right_box" keywords='active'/>
+	<include file="Public/button" keywords='active'/>
+</div>
+<script type="text/javascript">
+ 
+</script>
+</body>
+</html>

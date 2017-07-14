@@ -7,10 +7,13 @@
 	<meta name="keywords" content="在线,CSS,CSS 校验,格式化,xml转json 工具,在线工具,json视图,可视化,程序,服务器,域名注册,正则表达式,测试,在线json格式化工具,json 格式化,json格式化工具,json字符串格式化,json 在线查看器,json在线,json 在线验证,json tools online,在线文字对比工具" />
 		<meta name="description" content="在线,CSS,CSS 校验,格式化,xml转json 工具,在线工具,json视图,可视化,程序,服务器,域名注册,正则表达式,测试,在线json格式化工具,json 格式化,json格式化工具,json字符串格式化,json 在线查看器,json在线,json 在线验证,json tools online,在线文字对比工具">
 	<script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
-	<script src="//cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<link href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-	<script src="/Public/statics/layer/layer.js"></script>
+	<script src="//cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="/Public/statics/self/css/main.css">
+	<script type="text/javascript" src="/Public/statics/format/jshtml/base.js"></script>
+	<script type="text/javascript" src="/Public/statics/format/jshtml/htmlformat.js"></script>
+	<script type="text/javascript" src="/Public/statics/format/jshtml/jsformat.js"></script>
+	<script type="text/javascript" src="/Public/statics/layer/layer.js"></script>
 	<!--<script src="http://7bv9ya.com1.z0.glb.clouddn.com/jquery.cookie.js"></script>-->
 </head>
 <body>
@@ -84,12 +87,13 @@
 		            <li><a href="http://cssnb.com/iframe/rgb/rgb.html" target="_blank">RGB颜色对照表</a></li>
 		        </ul>
 	        </li>
-	        <li class="dropdown [more]">
+	        <li class="dropdown active">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多	 <span class="caret"></span></a>
 	           <ul class="dropdown-menu">
-		            <li><a href="#">Action</a></li>
-		            <li><a href="#">Another action</a></li>
-		            <li><a href="#">Something else here</a></li>
+		            <li><a href="<?php echo U('Tool/more/zishu');?>">字数统计工具</a></li>
+		            <li><a href="<?php echo U('Tool/more/quc');?>">在线去重工具</a></li>
+		         <!--    <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li> -->
 		            <li role="separator" class="divider"></li>
 		            <li><a href="<?php echo U('Tool/more/fanyimi');?>">英汉互译</a></li>
 		        </ul>
@@ -102,47 +106,29 @@
 </div>
 	<!-- <p class="bg-warning msgs">...</p> -->
 	<div class="left_kuang">
-		<div class="left_main" >
+		<div class="left_main">
 			<div class="min-title">
-				<!-- <h1>Welcome to CssNb.com</h1> -->
-				<!-- <div class="alert alert-danger" role="alert alert-dismissible">Welcome to CssNb.com</div> -->
-				<div class="alert alert-danger alert-dismissible" role="alert">
-				  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				  <strong>"工欲善其事，必先利其器。"——孔子《论语·卫灵公》</strong>
-				</div>
+				<h1>在线去重工具</h1>
+			    <!-- <h3>请在下框输入您要转换的内容:</h3>   -->
 			</div>
-			<div>
-				<form class="ns">
-					<p style="margin-top: 20px;">
-						<b><span  style="width: 90px;">当前时间戳：</span></b>
-						<span class="red" id="cur_timestamp" style="margin-right:30px;"></span>
-						<b><span id="change">  </span></b> 
-						<span class="green" id="cur_date"style="margin-left:30px;"></span>
-					</p>
-					<hr />
-			        <p>
-						<b><span  style="width: 80px;">时间戳：&nbsp;&nbsp;&nbsp;&nbsp;</span></b>
-						<input type="text" id="timestamp_1" alt="时间戳timestamp" title="时间戳timestamp" style="" value ="" />
-						<input type="button" onclick="gens(1);" class="form_button btn btn-danger" style="margin-left: 10px; width:80px;" value="转换" />
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<b><span  style="width: 80px;">北京时间：</span></b>
-						<input type="text" id="beijing_time_1" alt="时间戳转北京时间" title="时间戳转北京时间" style="" value ="" />
-					</p>
-					<hr />
-					<p>
-						<b><span  style="width: 80px;">北京时间：</span></b>
-						<input type="text" id="beijing_time_2" alt="时间戳转北京时间" title="时间戳转北京时间" style="" value ="" />
-						<input type="button" onclick="gens(2);" class="form_button btn btn-danger" style="margin-left: 10px; width:80px;" value="转换" />
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<b><span  style="width: 80px;">时间戳：</span></b>
-						<input type="text" id="timestamp_2" alt="时间戳timestamp" title="时间戳timestamp" style="" value ="" />
-					</p>
-				</form>
-				<hr>
-				<div class="bs-callout bs-callout-danger" id="callout-progress-animation-css3">
-				    <div class="alert alert-success" role="alert">IP:<?php echo ($ipmsg['ip']); ?> &nbsp;&nbsp;地区：<?php echo ($ipmsg['area']); ?>&nbsp;&nbsp;类型：<?php echo ($ipmsg['location']); ?></div>
-				</div>
-			</div>
+			   <!-- /工具开始 -->
+			<!-- /工具开始 -->
+		    <h3>将列表内容放入文本框内，<strong>每行一条</strong>，点击去重按钮，即可得到无重复数据的列表：</h3>
+		        
+			<textarea id="list" class="toolarea form-control"   rows="8">懒人图库
+			www.cssnb.com
+			www.baidu.com
+			www.cssnb.com
+			工具界库
+			www.xinlang.com
+			www.cssnb.com
+			zheye.cc
+			www.baidu.com
+			www.sssssssssssss.com
+			zheye.cc
+			懒工具界
+			www.cssnb.com</textarea>
+			<input type="button" onclick="process()" value="去重处理" class="bt-green btn btn-success">
 		</div>
 	</div>
 	<div class="right_kuang" >
@@ -221,57 +207,53 @@
 	</div>
 </div>
 </div>
-
 <script type="text/javascript">
-	//时间戳转化js代码
-	function $(id) {
-		return document.getElementById(id);
+	function unique(ary) {
+	    var i = 0,
+	        gid='_'+(+new Date)+Math.random(),
+	        objs = [],
+	        hash = {
+	            'string': {},
+	            'boolean': {},
+	            'number': {}
+	        }, p, l = ary.length,
+	        ret = [];
+	    for (; i < l; i++) {
+	        p = ary[i];
+	        if (p == null) continue;
+	        tp = typeof p;
+	        if (tp in hash) {
+	            if (!(p in hash[tp])) {
+	                hash[tp][p] = 1;
+	                ret.push(p);
+	            }
+	        } else {
+	            if (p[gid]) continue;
+	            p[gid]=1;
+	            objs.push(p);
+	            ret.push(p);
+	        }
+	    }
+	    for(i=0,l=objs.length;i<l;i++) {
+	        p=objs[i];
+	        p[gid]=undefined;
+	        delete p[gid];
+	    }
+	    return ret;
 	}
-	function task() {
-		var timestamp = new Date();
-		document.getElementById('cur_timestamp').innerHTML = Math.round(timestamp / 1000);
-		document.getElementById('cur_date').innerHTML = timestamp2date(timestamp);
-	}
-	function showTime(){
-		setInterval("task();",1000)
-	}
-	function timestamp2date(timestamp) {
-		var paddin =['00','01','02','03','04','05','06','07','08','09'];
-		var date = new Date(timestamp);
-		Y = date.getFullYear() + '-';
-		M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
-		D = date.getDate();
-		if (D < 10) D = paddin[parseInt(D)];
-		D = D + ' ';
-		h = date.getHours() + ':';
-		m = date.getMinutes() + ':';
-		s = date.getSeconds(); 
-		if (s < 10) s = paddin[parseInt(s)];
-		return Y+M+D+h+m+s;
-	}
-	function gens(t) {
-		try {
-			if (t == 1) {
-				console.log((document.getElementById('timestamp_1').value));
-				document.getElementById('beijing_time_1').value = timestamp2date(parseInt(document.getElementById('timestamp_1').value) * 1000);
-			}
-			else {
-				document.getElementById('timestamp_2').value = Math.round(Date.parse(document.getElementById('beijing_time_2').value) / 1000);
-			}
-		}
-		catch(err) {
-			alert('输入内容格式不合法！');
-		}
-		
-	}
-	task();
-	document.getElementById('change').innerHTML = ' 实时转换 ';
-	showTime();
 
-	var timestamp = new Date();
-	document.getElementById('timestamp_1').value = Math.round(timestamp / 1000);
-
-	document.getElementById('beijing_time_2').value = timestamp2date(timestamp);
+	function process(){
+	    list = document.getElementById('list');
+	    arr = list.value.split('\n');
+	    arr = unique(arr);
+	    list.value = "";
+	    for(key in arr){
+		    list.value += arr[key] + '\n';
+	    }
+	    layer.msg('处理完成', function(){
+		//关闭后的操作
+		});
+	}
 </script>
 </body>
 </html>

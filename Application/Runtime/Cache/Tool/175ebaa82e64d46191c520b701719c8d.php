@@ -35,17 +35,14 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-	        <li><a href="#">编码/加密 <span class="sr-only">(current)</span></a></li>
+	        <li class="[erweima]"> <a href="<?php echo U('Tool/index/twoma');?>">二维码生成<span class="sr-only">(current)</span></a></li>
 	        <!-- <li><a href="#">翻译 <span class="sr-only">(current)</span></a></li> -->
 	        <li>
-	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">网络 <span class="caret"></span></a>
+	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">编码/加密 <span class="caret"></span></a>
 	        	<ul class="dropdown-menu">
-		        	<li><a href="#">获取你的IP</a></li>
-		        	<li><a href="#">获取IP信息</a></li>
-		        	<li><a href="#">IP定位周边信息</a></li>
-		        	<li><a href="#">获取您的浏览器信息</a></li>
-		        	<li><a href="#">常用USER_AGENT</a></li>
-		        	<li><a href="#">TCP/IP子网掩码计算换算</a></li>
+		        	<li><a href="#">MD5加密工具</a></li>
+		        	<li><a href="#">URL网址16进制加密工具</a></li>
+		        	<li><a href="#">Escape加密/解密工具</a></li>
 	        	</ul>
         	</li>
 	        <li    class="dropdown active">
@@ -86,6 +83,7 @@
 		            <li><a href="https://docs.open.alipay.com/399" target="_blank">支付宝开发商文档</a></li>
 		             <li role="separator" class="divider"></li>
 		            <li><a href="http://www.runoob.com/try/bootstrap/layoutit/" target="_blank">Bootstrap可视化布局</a></li>
+		            <li><a href="http://cssnb.com/iframe/rgb/rgb.html" target="_blank">RGB颜色对照表</a></li>
 		        </ul>
 	        </li>
 	        <li class="dropdown [more]">
@@ -98,6 +96,7 @@
 		            <li><a href="<?php echo U('Tool/more/fanyimi');?>">英汉互译</a></li>
 		        </ul>
 	        </li>
+	        <li><a href="http://cssnb.com/iframe/woman/chatwoman.html" target="_blank">美人儿<span class="sr-only">(current)</span></a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
