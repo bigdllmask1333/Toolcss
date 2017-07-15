@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN"> 
+<head> 
+<title>代码对比/归并</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" /> 
+<meta http-equiv="Content-Language" content="zh-CN" /> 
+<meta name="keywords" content="开源中国 在线工具,ostools,jsbin,加密/解密，Markdown,less,java api,php api,node.js api,QR Code"/>
+<meta name="description" content="开源中国在线工具,ostools为开发设计人员提供在线工具，提供jsbin在线 CSS、JS 调试，在线 Java API文档,在线 PHP API文档,在线 Node.js API文档,Less CSS编译器，MarkDown编译器等其他在线工具" />
+<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" /> 
+<link rel="stylesheet" href="css/basic.css" type="text/css"/> 
+<script type="text/javascript" src='js/jquery-1.7.2.js'></script>
+<script type="text/javascript" src='js/jquery.cookies.2.2.0.min.js'></script>
+<link rel="stylesheet" href='css/bootstrap.min.css'/>
+<script src='js/bootstrap.min.js'></script>
+
+</head>
+<body>
+	<script type="text/javascript" src="js/codemirror.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/mergely.css"/>
+<script type="text/javascript" src="js/mergely.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/codemirror.css"/>
+<script id="render_js" type="text/javascript" src="js/javascript.js"></script>
+<script>
+var l_files;
+var r_files;
+
+$(document).ready(function() {
+    $('#diff').mergely({
+        cmsettings: {
+			mode: "javascript",
+            readOnly: false,
+            lineWrapping: true
+        }
+    });
+});
+
+function leftFileSelect(files) {
+	l_files=files;
+	setLeft(l_files);
+}
+
+function rightFileSelect(files){
+	r_files=files;
+	setRight(r_files);
+}
+
+function setRight(files){
+	f=files[0];
+    var reader = new FileReader();
+    reader.onload = (function(file) {
+        return function(e) {
+			$('#diff').mergely("rhs",this.result);
+        };
+    })(f);
+    reader.readAsText(f,$('#r_encode').val());
+}
+
+function setLeft(files){
+    f=files[0];
+	var f_name=f.name;
+	var f_type=f_name.substring(f_name.lastIndexOf("."));
+	switch(f_type){
+		case ".js":
+			setRender("javascript/javascript.js");
+			break;
+		case ".css":
+            setRender("css/css.js");		
+            break;		
+		case ".go":
+			setRender("go/go.js");		
+			break;		
+		case ".groovy":
+			setRender("groovy/groovy.js");		
+			break;		
+		case ".c",".cpp":
+			setRender("clike/clike.js");		
+			break;	
+		case ".php":
+			setRender("php/php.js");		
+			break;		
+		case ".xml":
+			setRender("xml/xml.js");		
+			break;	
+		case ".html":
+			setRender("htmlembedded/htmlembedded.js");		
+			break;	
+		case ".less":
+			setRender("less/less.js");		
+			break;	
+		case ".lua":
+			setRender("lua/lua.js");
+			break;
+		case ".md":
+			setRender("markdown/markdown.js");
+			break;
+		case ".vm":
+			setRender("velocity/velocity.js");
+			break;
+		case ".py":
+			setRender("python/python.js");
+			break;
+		case ".properties":
+			setRender("properties/properties.js");
+			break;
+		case ".rb":
+			setRender("ruby/ruby.js");
+			break;
+		case ".sh":
+			setRender("shell/shell.js");
+			break;
+		case ".sql":
+			setRender("plsql/plsql.js");
+			break;
+		case ".erl":
+			setRender("erlang/erlang.js");
+			break;
+		case ".coffee":
+			setRender("coffeescript/coffeescript.js");
+			break;
+		case ".pl":
+			setRender("perl/perl.js");
+			break;
+		defualt:setRender("clike/clike.js");
+	}
+    var reader = new FileReader();
+    reader.onload = (function(file) {
+        return function(e) {
+			$('#diff').mergely("lhs",this.result);
+        };
+    })(f);
+    reader.readAsText(f,$('#l_encode').val());
+}
+function setLeftCode(){
+	if(null!=l_files)
+		setLeft(l_files);
+}
+function setRightCode(){
+	if(null!=r_files)
+		setRight(r_files);
+}
+function setRender(type){
+	var base_src="/js/CodeMirror-2.25/mode/";
+	$("#render_js").attr("src",base_src+type);
+}
+</script>
+<div id="mainContent" class="wrapper">
+	<div>
+    	<form class="form-inline well" style="margin:10px 0 0 0;">
+			<div style="float:left;">
+    		<label>选择第一个文件：</label>
+    		<input type="file" id="file" onchange="leftFileSelect(this.files)" single/>
+			<label>编码：</label>
+            <select id="l_encode" value="UTF-8" class="span1" onchange="setLeftCode();">
+				<option value="UTF-8">UTF-8</option>
+				<option value="GBK">GBK</option>
+				<option value="GB2312">GB2312</option>
+				<option value="GB18030">GB18030</option>
+				<option value="ISO-8859-2">ISO-8859-2</option>
+			</select>
+			</div>
+			<div style="float:right;">
+			<label>选择第二个文件：</label>
+    		<input type="file" id="file" onchange="rightFileSelect(this.files)" single/>
+			<label>编码：</label>
+            <select id="r_encode" value="UTF-8" class="span1" onchange="setRightCode();">
+				<option value="UTF-8">UTF-8</option>
+				<option value="GBK">GBK</option>
+				<option value="GB2312">GB2312</option>
+				<option value="GB18030">GB18030</option>
+				<option value="ISO-8859-2">ISO-8859-2</option>
+			</select>
+			</div>
+    	</form>
+		<div style="color:#C00;">
+        		由于IE全系列对HTML5的Canvas以及File API支持不好，推荐使用<a href="http://www.oschina.net/p/chrome" target="blank">Chrome</a>、<a href="http://www.oschina.net/p/firefox" target="blank">Firefox</a>浏览器，另外请选择正确的文件编码方式以免出现乱码或者显示错误。
+		</div>
+	</div>
+	<div id="diff" class="toolUsing"></div>
+</div>
+<style>
+.CodeMirror {
+	font-family: Courier New;
+	font-size: 14px;
+}
+.mergely-c-rem{
+	text-decoration:none;
+}
+</style>
+</body>
+</html>

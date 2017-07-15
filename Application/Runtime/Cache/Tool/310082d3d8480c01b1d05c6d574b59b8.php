@@ -109,45 +109,16 @@
 	</nav>
 </div>
 	<!-- <p class="bg-warning msgs">...</p> -->
-	<div class="left_kuang">
-		<div class="left_main">
+	<div class="left_kuang1">
+		<div class="left_main1">
 			<div class="min-title">
-				<h1>ICO在线生成</h1>
+				<h1>代码对比/归并</h1>
 			    <!-- <h3>请在下框输入您要转换的内容:</h3>   -->
 			</div>
 			   <!-- /工具开始 -->
-			<iframe src="http://cssnb.com/iframe/ico/index.php" style="width: 100%;height:350px;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"></iframe>	
+			<iframe src="http://cssnb.com/iframe/duibi/default.html" style="width: 100%;height:850px;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"></iframe>	
 		</div>
 	</div>
-	<div class="right_kuang" >
-	<div class="right_main">
-		<!-- <strong><center><h4>最新更新</h4></center></strong> -->
-		<div class="panel-heading"><h3 class="widget-title panel-title">最新更新</h3></div>
-		<!-- <hr> -->
-		<div style="margin-left: 15px"><p><a href="<?php echo U('Tool/format/jshtml_format');?>">Javascript/HTML压缩、格式化</a></p>
-		<p><a href="<?php echo U('Tool/format/jsons');?>">JSON 在线解析工具</a></p>
-		<p><a href="<?php echo U('Tool/more/fanyimi');?>">英汉互译</a></p>
-		<p><a href="<?php echo U('Tool/format/xmlzip');?>">XML压缩、格式化</a></p>
-		<p><a href="<?php echo U('Tool/format/csszip');?>">CSS压缩、格式化</a></p></div>
-	</div> 
-	<div class="right_main">
-		
-		<div class="panel-heading"><h3 class="widget-title panel-title">实时热点<span style="float:right;font-size: 10px;margin-top: 10px">搜索指数</span></h3></div>
-		<ul class="list-group">
-		    <li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][1]); ?><span style="float:right"><?php echo ($news['num'][1]); ?>次</span></li>
-			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][2]); ?><span style="float:right"><?php echo ($news['num'][2]); ?>次</span></li>
-			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][3]); ?><span style="float:right"><?php echo ($news['num'][3]); ?>次</span></li>
-			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][4]); ?><span style="float:right"><?php echo ($news['num'][4]); ?>次</span></li>
-			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][5]); ?><span style="float:right"><?php echo ($news['num'][5]); ?>次</span></li>
-		</ul>
-
-	</div>
-	<div class="right_main_min">
-		<div class="panel-heading"><h3 class="widget-title panel-title">每日说说：</h3></div>
-		<div style="margin-left: 15px"><p><h6>我用心去写代码,只为寻觅一个懂我的人！</h6></p></div> 
-
-	</div>
-</div>
 	<div class="button_main">
 	<div class="panel panel-default friend-link yinyin">
 		<div class="panel-heading">友情链接（互换友链联系QQ1113249273，接受程序博客相关站点）</div>
