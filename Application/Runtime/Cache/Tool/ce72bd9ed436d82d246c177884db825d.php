@@ -56,13 +56,14 @@
 	            <li><a href="#">One more separated link</a></li> -->
 	          </ul>
 	        </li>
+	        <li class="[zhengze]"> <a href="<?php echo U('Tool/more/zz');?>">正则表达式<span class="sr-only">(current)</span></a></li>
 	      </ul>
-	      <form class="navbar-form navbar-left">
+	      <!-- <form class="navbar-form navbar-left">
 	        <div class="form-group">
 	          <input type="text" class="form-control" placeholder="Search">
 	        </div>
 	        <button type="submit" class="btn btn-default">Submit</button>
-	      </form>
+	      </form> -->
 	      <ul class="nav navbar-nav navbar-right">
 	        <li>
 	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">文档<span class="caret"></span></a>
@@ -87,9 +88,12 @@
 	        <li class="dropdown [more]">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多	 <span class="caret"></span></a>
 	           <ul class="dropdown-menu">
-		            <li><a href="#">Action</a></li>
-		            <li><a href="#">Another action</a></li>
-		            <li><a href="#">Something else here</a></li>
+		            <li><a href="<?php echo U('Tool/more/icomake');?>">ICO在线生成</a></li>
+		            <li><a href="<?php echo U('Tool/more/zishu');?>">字数统计工具</a></li>
+		            <li><a href="<?php echo U('Tool/more/quc');?>">在线去重工具</a></li>
+		            <li><a href="<?php echo U('Tool/more/papapa');?>">计算男女交往几天可以啪啪啪</a></li>
+		         <!--    <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li> -->
 		            <li role="separator" class="divider"></li>
 		            <li><a href="<?php echo U('Tool/more/fanyimi');?>">英汉互译</a></li>
 		        </ul>

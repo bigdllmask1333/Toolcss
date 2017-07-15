@@ -13,6 +13,7 @@
 	<script type="text/javascript" src="/Public/statics/format/jshtml/base.js"></script>
 	<script type="text/javascript" src="/Public/statics/format/jshtml/htmlformat.js"></script>
 	<script type="text/javascript" src="/Public/statics/format/jshtml/jsformat.js"></script>
+	<script type="text/javascript" src="/Public/statics/layer/layer.js"></script>
 	<!--<script src="http://7bv9ya.com1.z0.glb.clouddn.com/jquery.cookie.js"></script>-->
 </head>
 <body>
@@ -89,7 +90,6 @@
 	        <li class="dropdown active">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多	 <span class="caret"></span></a>
 	           <ul class="dropdown-menu">
-		            <li><a href="<?php echo U('Tool/more/icomake');?>">ICO在线生成</a></li>
 		            <li><a href="<?php echo U('Tool/more/zishu');?>">字数统计工具</a></li>
 		            <li><a href="<?php echo U('Tool/more/quc');?>">在线去重工具</a></li>
 		            <li><a href="<?php echo U('Tool/more/papapa');?>">计算男女交往几天可以啪啪啪</a></li>
@@ -109,22 +109,45 @@
 	<div class="left_kuang">
 		<div class="left_main">
 			<div class="min-title">
-				<h1>字数统计工具</h1>
+				<h1>在线计算男女交往几天可以啪啪啪 </h1>
 			    <!-- <h3>请在下框输入您要转换的内容:</h3>   -->
 			</div>
-			   <!-- /工具开始 -->
-			<style type="text/css">
-			.num{ font-size:14px; font-weight:700; color:#F00}
-			</style>
-			    
-			    <h3>这是一个快速计算字数和字符数的小工具（小说作者和或编辑必备工具）：</h3>
-			<textarea id="content" name="content" class="toolarea form-control"   rows="8">在线字数统计工欲善其事，必先利其器。显而易见，最高的效率就是对现有材料的最佳利用。学会偷懒，并懒出境界是提高工作效率最有效的方法！工具界 http://www.cssnb.com/2016</textarea>
-			汉字：<span id="zhongwen" class="num">0</span> 个<br />
-			中文标点：<span id="zbiaodian" class="num">0</span> 个<br>汉字+标点：<span id="zhongwenbiaodian" class="num">0</span> 个<br />
-			英文：<span id="yingwen" class="num">0</span> 个 （含英文状态下的数字、符号、标点）<br>
-			数字：<span id="shuzi" class="num">0</span> 个<br />
-			字符总数：<span id="numwords" class="num">0</span> 个字符<br /><br />
-			小贴士：汉字和中文标点算两个字符，数字、空格、英文字母，英文标点算做一个字符。<br />
+			<!-- /工具开始 -->
+		    <h4>纯理论，只作参考，实战一定有误差，过可理论日子都没啪到请先自我检讨。可以作为自己交往妹子，什么时候提出啪啪啪作为依据，以免被拒绝好尴尬。。。</h4>
+			<form action="" name="name_form" method="get" class="form-inline">
+		        <div>
+		          	<!-- <div class='span strong'>Af = </div> -->
+		          	<input id="Af" class="input-text form-control" style="margin:3px;" type="text" placeholder="23">
+		          	<span>女方年龄（年龄）40岁以上女性本公式不适用</span>
+		        </div>
+		        <div>
+		          	<!-- <div class='span strong'>Lf = </div> -->
+	          		<input id="Lf" class="input-text form-control" style="margin:3px;" type="text" placeholder="9">
+		          	<span>女方外貌（外观）10为满分</span>
+		        </div>
+		        <div>
+		          	<!-- <div class='span strong'>Lm = </div> -->
+	          		<input id="Lm" class="input-text form-control" style="margin:3px;" type="text" placeholder="8">
+		          	<span>男方外貌（外观）10为满分</span>
+		        </div>
+		        <div>
+		          	<!-- <div class='span strong'>Wm = </div> -->
+	          		<input id="Wm" class="input-text form-control" style="margin:3px;" type="text" placeholder="23">
+		          	<span>男方资产（价值），每10万港元为1个单位，不置上限，物业及汽车亦计算在内</span>
+		        </div>
+		        <div>
+		          	<!-- <div class='span strong'>Sf = </div> -->
+		          	<input id="Sf" class="input-text form-control" style="margin:3px;" type="text" placeholder="0">
+		          	<span>女方曾有性行为的男性数目（性伴侣）</span>
+		        </div>
+		        <div>
+		          	<div class='btn btn-default'>多少天后可以啪啪啪：</div>
+		          	<input id="day" class="input-text form-control" style="margin:3px;" type="text" placeholder="">
+		          	<span>天</span>
+		        </div>
+	        </form>
+	        <div class="alert alert-success" role="alert">例子1： 中女与帅哥（有房） 女30岁外貌7分曾与2男有性行为 男外貌8分资产300万，那么交往多少天可以啪啪啪：[（40-30）^ 2 + 7 ^ 3]×10÷[（8 ^ 2 + 30）×（2 + 1）^ 2] = 5.24日</div>
+	        <div class="alert alert-info" role="alert">例： 屌丝与女神 女22岁外貌9分处女 男外貌3分资产0，那么交往多少天可以啪啪啪：[（40-22）^ 2 + 9 ^ 3]×10÷[（3 ^ 2 + 0）×（0 + 1）^ 2] = 1170日（不过熬得到去那天才算）</div>
 		</div>
 	</div>
 	<div class="right_kuang" >
@@ -203,87 +226,37 @@
 	</div>
 </div>
 </div>
-<script language="javascript">
-	function $(id){return document.getElementById(id);}
-	var EventUtil = function(){};
-	EventUtil.addEventHandler = function(obj,EventType,Handler)
-	{
-	//如果是FF
-	if(obj.addEventListener)
-	{
-	   obj.addEventListener(EventType,Handler,false);
-	} 
-	//如果是IE
-	else if(obj.attachEvent)
-	{
-	   obj.attachEvent('on'+EventType,Handler);
-	} 
-	else
-	{
-	   obj['on'+EventType] = Handler;
-	}
+<script type="text/javascript">
+	function getValue(){
+	  Af = parseFloat($('#Af').val());
+	  Lf = parseFloat($('#Lf').val());
+	  Lm = parseFloat($('#Lm').val());
+	  Wm = parseFloat($('#Wm').val());
+	  Sf = parseFloat($('#Sf').val());
+	  return 10 * ((40-Af)*(40-Af)+(Lf*Lf*Lf)) / ( ( Lm*Lm + Wm ) * ( Sf + 1 ) * ( Sf + 1 ) );
 	}
 
-	//alert($("chaptercontent").value);
-	if($("content")){
-	EventUtil.addEventHandler($('content'),'propertychange',CountChineseCharacters);
-	EventUtil.addEventHandler($('content'),'input',CountChineseCharacters);
-	//EventUtil.addEventHandler($('chaptercontent'),'keydown',CountChineseCharacters('chaptercontent'));
+	function getSf(){
+	  _Af = parseFloat($('#_Af').val());
+	  _Lf = parseFloat($('#_Lf').val());
+	  _Lm = parseFloat($('#_Lm').val());
+	  _Wm = parseFloat($('#_Wm').val());
+	  _day = parseFloat($('#_day').val());
+	  console.log( ( Lm*Lm + Wm ) * _day  );
+	  ret = Math.sqrt( 10 * ((40-_Af)*(40-_Af)+(_Lf*_Lf*_Lf)) / ( ( _Lm*_Lm + _Wm ) * _day ) ) - 1;
+	  return ret ;
 	}
-	window.onload=CountChineseCharacters();
+	$("input:not([id^='_'])").change(function(){
+        $("#day").val( 
+            getValue().toFixed(2)
+        );
+    });
 
-	function showit(Word){
-	alert(Word);
-	}
-	function CountChineseCharacters() {
-	Words=$('content').value;
-		var W = new Object();
-		var Result = new Array();
-		var iNumwords = 0;
-		var sNumwords = 0;
-		var sTotal = 0;//双字节字符;
-		var iTotal = 0;//中文字符；
-		var eTotal = 0;//Ｅ文字符
-		var otherTotal = 0;
-		var bTotal = 0;
-		var inum = 0;
-		
-		for (i=0; i<Words.length; i++) {
-			var c = Words.charAt(i);
-			if (c.match(/[\u4e00-\u9fa5]/)) {
-				if (isNaN(W[c])) {
-					iNumwords++;
-					W[c] = 1;
-				}
-				iTotal++;
-			}
-		}
-
-		for (i=0; i<Words.length; i++) {
-			var c = Words.charAt(i);
-			if (c.match(/[^\x00-\xff]/)) {
-				if (isNaN(W[c])) {
-					sNumwords++;
-
-				}
-				sTotal++;
-			}
-			else
-			{
-			eTotal++;
-			}
-			if (c.match(/[0-9]/)) {
-				inum++;
-			}
-		}
-	//alert(iTotal);
-	$('zhongwen').innerText=iTotal;
-	$('zbiaodian').innerText=sTotal-iTotal;
-	$('zhongwenbiaodian').innerText=sTotal;
-	$('yingwen').innerText=eTotal;
-	$('shuzi').innerText=inum;
-	document.getElementById("numwords").innerHTML=iTotal*2+(sTotal-iTotal)*2+eTotal;
-	}
-	</script>
+    $("input[id^='_']").change(function(){
+        $("#_Sf").val(
+            getSf().toFixed(2)
+        );
+    }); 
+</script>
 </body>
 </html>

@@ -90,8 +90,10 @@
 	        <li class="dropdown active">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多	 <span class="caret"></span></a>
 	           <ul class="dropdown-menu">
+		            <li><a href="<?php echo U('Tool/more/icomake');?>">ICO在线生成</a></li>
 		            <li><a href="<?php echo U('Tool/more/zishu');?>">字数统计工具</a></li>
 		            <li><a href="<?php echo U('Tool/more/quc');?>">在线去重工具</a></li>
+		            <li><a href="<?php echo U('Tool/more/papapa');?>">计算男女交往几天可以啪啪啪</a></li>
 		         <!--    <li><a href="#">Another action</a></li>
 		            <li><a href="#">Something else here</a></li> -->
 		            <li role="separator" class="divider"></li>

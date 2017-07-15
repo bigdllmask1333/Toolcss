@@ -13,6 +13,7 @@
 	<script type="text/javascript" src="/Public/statics/format/jshtml/base.js"></script>
 	<script type="text/javascript" src="/Public/statics/format/jshtml/htmlformat.js"></script>
 	<script type="text/javascript" src="/Public/statics/format/jshtml/jsformat.js"></script>
+	<script type="text/javascript" src="/Public/statics/layer/layer.js"></script>
 	<!--<script src="http://7bv9ya.com1.z0.glb.clouddn.com/jquery.cookie.js"></script>-->
 </head>
 <body>
@@ -109,22 +110,11 @@
 	<div class="left_kuang">
 		<div class="left_main">
 			<div class="min-title">
-				<h1>字数统计工具</h1>
+				<h1>ICO在线生成</h1>
 			    <!-- <h3>请在下框输入您要转换的内容:</h3>   -->
 			</div>
 			   <!-- /工具开始 -->
-			<style type="text/css">
-			.num{ font-size:14px; font-weight:700; color:#F00}
-			</style>
-			    
-			    <h3>这是一个快速计算字数和字符数的小工具（小说作者和或编辑必备工具）：</h3>
-			<textarea id="content" name="content" class="toolarea form-control"   rows="8">在线字数统计工欲善其事，必先利其器。显而易见，最高的效率就是对现有材料的最佳利用。学会偷懒，并懒出境界是提高工作效率最有效的方法！工具界 http://www.cssnb.com/2016</textarea>
-			汉字：<span id="zhongwen" class="num">0</span> 个<br />
-			中文标点：<span id="zbiaodian" class="num">0</span> 个<br>汉字+标点：<span id="zhongwenbiaodian" class="num">0</span> 个<br />
-			英文：<span id="yingwen" class="num">0</span> 个 （含英文状态下的数字、符号、标点）<br>
-			数字：<span id="shuzi" class="num">0</span> 个<br />
-			字符总数：<span id="numwords" class="num">0</span> 个字符<br /><br />
-			小贴士：汉字和中文标点算两个字符，数字、空格、英文字母，英文标点算做一个字符。<br />
+			<iframe src="http://cssnb.com/iframe/ico/index.php" style="width: 100%;height:350px;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"></iframe>	
 		</div>
 	</div>
 	<div class="right_kuang" >
@@ -203,87 +193,5 @@
 	</div>
 </div>
 </div>
-<script language="javascript">
-	function $(id){return document.getElementById(id);}
-	var EventUtil = function(){};
-	EventUtil.addEventHandler = function(obj,EventType,Handler)
-	{
-	//如果是FF
-	if(obj.addEventListener)
-	{
-	   obj.addEventListener(EventType,Handler,false);
-	} 
-	//如果是IE
-	else if(obj.attachEvent)
-	{
-	   obj.attachEvent('on'+EventType,Handler);
-	} 
-	else
-	{
-	   obj['on'+EventType] = Handler;
-	}
-	}
-
-	//alert($("chaptercontent").value);
-	if($("content")){
-	EventUtil.addEventHandler($('content'),'propertychange',CountChineseCharacters);
-	EventUtil.addEventHandler($('content'),'input',CountChineseCharacters);
-	//EventUtil.addEventHandler($('chaptercontent'),'keydown',CountChineseCharacters('chaptercontent'));
-	}
-	window.onload=CountChineseCharacters();
-
-	function showit(Word){
-	alert(Word);
-	}
-	function CountChineseCharacters() {
-	Words=$('content').value;
-		var W = new Object();
-		var Result = new Array();
-		var iNumwords = 0;
-		var sNumwords = 0;
-		var sTotal = 0;//双字节字符;
-		var iTotal = 0;//中文字符；
-		var eTotal = 0;//Ｅ文字符
-		var otherTotal = 0;
-		var bTotal = 0;
-		var inum = 0;
-		
-		for (i=0; i<Words.length; i++) {
-			var c = Words.charAt(i);
-			if (c.match(/[\u4e00-\u9fa5]/)) {
-				if (isNaN(W[c])) {
-					iNumwords++;
-					W[c] = 1;
-				}
-				iTotal++;
-			}
-		}
-
-		for (i=0; i<Words.length; i++) {
-			var c = Words.charAt(i);
-			if (c.match(/[^\x00-\xff]/)) {
-				if (isNaN(W[c])) {
-					sNumwords++;
-
-				}
-				sTotal++;
-			}
-			else
-			{
-			eTotal++;
-			}
-			if (c.match(/[0-9]/)) {
-				inum++;
-			}
-		}
-	//alert(iTotal);
-	$('zhongwen').innerText=iTotal;
-	$('zbiaodian').innerText=sTotal-iTotal;
-	$('zhongwenbiaodian').innerText=sTotal;
-	$('yingwen').innerText=eTotal;
-	$('shuzi').innerText=inum;
-	document.getElementById("numwords").innerHTML=iTotal*2+(sTotal-iTotal)*2+eTotal;
-	}
-	</script>
 </body>
 </html>

@@ -37,12 +37,12 @@
 	      <ul class="nav navbar-nav">
 	        <li class="[erweima]"> <a href="<?php echo U('Tool/index/twoma');?>">二维码生成<span class="sr-only">(current)</span></a></li>
 	        <!-- <li><a href="#">翻译 <span class="sr-only">(current)</span></a></li> -->
-	        <li>
+	        <li class="[mi]">
 	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">编码/加密 <span class="caret"></span></a>
 	        	<ul class="dropdown-menu">
-		        	<li><a href="#">MD5加密工具</a></li>
-		        	<li><a href="#">URL网址16进制加密工具</a></li>
-		        	<li><a href="#">Escape加密/解密工具</a></li>
+		        	<li><a href="<?php echo U('Tool/mi/mi5');?>">MD5加密工具</a></li>
+		        	<li><a href="<?php echo U('Tool/mi/urlmi');?>">URL网址16进制加密工具</a></li>
+		        	<li><a href="<?php echo U('Tool/mi/escapemi');?>">Escape加密/解密工具</a></li>
 	        	</ul>
         	</li>
 	        <li    class="dropdown active">
@@ -89,9 +89,12 @@
 	        <li class="dropdown [more]">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多	 <span class="caret"></span></a>
 	           <ul class="dropdown-menu">
-		            <li><a href="#">Action</a></li>
-		            <li><a href="#">Another action</a></li>
-		            <li><a href="#">Something else here</a></li>
+		            <li><a href="<?php echo U('Tool/more/icomake');?>">ICO在线生成</a></li>
+		            <li><a href="<?php echo U('Tool/more/zishu');?>">字数统计工具</a></li>
+		            <li><a href="<?php echo U('Tool/more/quc');?>">在线去重工具</a></li>
+		            <li><a href="<?php echo U('Tool/more/papapa');?>">计算男女交往几天可以啪啪啪</a></li>
+		         <!--    <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li> -->
 		            <li role="separator" class="divider"></li>
 		            <li><a href="<?php echo U('Tool/more/fanyimi');?>">英汉互译</a></li>
 		        </ul>

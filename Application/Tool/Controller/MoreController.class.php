@@ -19,7 +19,6 @@ class MoreController extends Controller {
     		//引入接口调用类
     		import('Common.Fanyi.Fanyi');
 			$object = new Fanyi();
-
     		$query=$_POST['query'];	
     		if(preg_match('/[a-zA-Z]/',$query)){
 				$content=$object->translate($query, 'auto', 'zh');
@@ -30,7 +29,6 @@ class MoreController extends Controller {
 			$data['content'] = $content['trans_result'][0]['dst'];
 			$this->ajaxReturn($data);
     	}
-    	
         $this->display();
     }
 
@@ -48,7 +46,6 @@ class MoreController extends Controller {
     			$data['msg']  = 'false';
     		}
     		error_log("密码：".var_export($psd,true));
-    		
 			// $data['content'] = $content['trans_result'][0]['dst'];
 			$this->ajaxReturn($data);
     	}
@@ -59,8 +56,20 @@ class MoreController extends Controller {
         $this->display();
     }
 
-     //字数
+     //去重
     public function quc(){
+        $this->display();
+    }
+    //啪啪啪
+    public function papapa(){
+        $this->display();
+    }
+     //ico在线生成
+    public function icomake(){
+        $this->display();
+    }
+     //正则表达式
+    public function zz(){
         $this->display();
     }
 }

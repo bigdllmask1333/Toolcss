@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<title>工具界-CssNb</title>
+	<meta name="keywords" content="在线,CSS,CSS 校验,格式化,xml转json 工具,在线工具,json视图,可视化,程序,服务器,域名注册,正则表达式,测试,在线json格式化工具,json 格式化,json格式化工具,json字符串格式化,json 在线查看器,json在线,json 在线验证,json tools online,在线文字对比工具" />
+		<meta name="description" content="在线,CSS,CSS 校验,格式化,xml转json 工具,在线工具,json视图,可视化,程序,服务器,域名注册,正则表达式,测试,在线json格式化工具,json 格式化,json格式化工具,json字符串格式化,json 在线查看器,json在线,json 在线验证,json tools online,在线文字对比工具">
+	<script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+	<link href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	<script src="//cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/statics/self/css/main.css">
+	<script type="text/javascript" src="__PUBLIC__/statics/format/jshtml/base.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/statics/format/jshtml/htmlformat.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/statics/format/jshtml/jsformat.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/statics/layer/layer.js"></script>
+	<!--<script src="http://7bv9ya.com1.z0.glb.clouddn.com/jquery.cookie.js"></script>-->
+</head>
+<body>
+<div class="container-fluid">
+	<include file="Public/head" more="active"/>
+	<!-- <p class="bg-warning msgs">...</p> -->
+	<div class="left_kuang">
+		<div class="left_main">
+			<div class="min-title">
+				<h1>在线计算男女交往几天可以啪啪啪 </h1>
+			    <!-- <h3>请在下框输入您要转换的内容:</h3>   -->
+			</div>
+			<!-- /工具开始 -->
+		    <h4>纯理论，只作参考，实战一定有误差，过可理论日子都没啪到请先自我检讨。可以作为自己交往妹子，什么时候提出啪啪啪作为依据，以免被拒绝好尴尬。。。</h4>
+			<form action="" name="name_form" method="get" class="form-inline">
+		        <div>
+		          	<!-- <div class='span strong'>Af = </div> -->
+		          	<input id="Af" class="input-text form-control" style="margin:3px;" type="text" placeholder="23">
+		          	<span>女方年龄（年龄）40岁以上女性本公式不适用</span>
+		        </div>
+		        <div>
+		          	<!-- <div class='span strong'>Lf = </div> -->
+	          		<input id="Lf" class="input-text form-control" style="margin:3px;" type="text" placeholder="9">
+		          	<span>女方外貌（外观）10为满分</span>
+		        </div>
+		        <div>
+		          	<!-- <div class='span strong'>Lm = </div> -->
+	          		<input id="Lm" class="input-text form-control" style="margin:3px;" type="text" placeholder="8">
+		          	<span>男方外貌（外观）10为满分</span>
+		        </div>
+		        <div>
+		          	<!-- <div class='span strong'>Wm = </div> -->
+	          		<input id="Wm" class="input-text form-control" style="margin:3px;" type="text" placeholder="23">
+		          	<span>男方资产（价值），每10万港元为1个单位，不置上限，物业及汽车亦计算在内</span>
+		        </div>
+		        <div>
+		          	<!-- <div class='span strong'>Sf = </div> -->
+		          	<input id="Sf" class="input-text form-control" style="margin:3px;" type="text" placeholder="0">
+		          	<span>女方曾有性行为的男性数目（性伴侣）</span>
+		        </div>
+		        <div>
+		          	<div class='btn btn-default'>多少天后可以啪啪啪：</div>
+		          	<input id="day" class="input-text form-control" style="margin:3px;" type="text" placeholder="">
+		          	<span>天</span>
+		        </div>
+	        </form>
+	        <div class="alert alert-success" role="alert">例子1： 中女与帅哥（有房） 女30岁外貌7分曾与2男有性行为 男外貌8分资产300万，那么交往多少天可以啪啪啪：[（40-30）^ 2 + 7 ^ 3]×10÷[（8 ^ 2 + 30）×（2 + 1）^ 2] = 5.24日</div>
+	        <div class="alert alert-info" role="alert">例： 屌丝与女神 女22岁外貌9分处女 男外貌3分资产0，那么交往多少天可以啪啪啪：[（40-22）^ 2 + 9 ^ 3]×10÷[（3 ^ 2 + 0）×（0 + 1）^ 2] = 1170日（不过熬得到去那天才算）</div>
+		</div>
+	</div>
+	<include file="Public/right_box" keywords='active'/>
+	<include file="Public/button" keywords='active'/>
+</div>
+<script type="text/javascript">
+	function getValue(){
+	  Af = parseFloat($('#Af').val());
+	  Lf = parseFloat($('#Lf').val());
+	  Lm = parseFloat($('#Lm').val());
+	  Wm = parseFloat($('#Wm').val());
+	  Sf = parseFloat($('#Sf').val());
+	  return 10 * ((40-Af)*(40-Af)+(Lf*Lf*Lf)) / ( ( Lm*Lm + Wm ) * ( Sf + 1 ) * ( Sf + 1 ) );
+	}
+
+	function getSf(){
+	  _Af = parseFloat($('#_Af').val());
+	  _Lf = parseFloat($('#_Lf').val());
+	  _Lm = parseFloat($('#_Lm').val());
+	  _Wm = parseFloat($('#_Wm').val());
+	  _day = parseFloat($('#_day').val());
+	  console.log( ( Lm*Lm + Wm ) * _day  );
+	  ret = Math.sqrt( 10 * ((40-_Af)*(40-_Af)+(_Lf*_Lf*_Lf)) / ( ( _Lm*_Lm + _Wm ) * _day ) ) - 1;
+	  return ret ;
+	}
+	$("input:not([id^='_'])").change(function(){
+        $("#day").val( 
+            getValue().toFixed(2)
+        );
+    });
+
+    $("input[id^='_']").change(function(){
+        $("#_Sf").val(
+            getSf().toFixed(2)
+        );
+    }); 
+</script>
+</body>
+</html>

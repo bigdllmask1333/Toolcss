@@ -7,7 +7,6 @@ class IndexController extends Controller {
         parent::__construct();
         $news=news();
         $this->assign('news',$news);        
-
     }
     public function index(){
     	import('Common.Juheip.Ip');

@@ -13,6 +13,7 @@
 	<script type="text/javascript" src="/Public/statics/format/jshtml/base.js"></script>
 	<script type="text/javascript" src="/Public/statics/format/jshtml/htmlformat.js"></script>
 	<script type="text/javascript" src="/Public/statics/format/jshtml/jsformat.js"></script>
+	<script type="text/javascript" src="/Public/statics/layer/layer.js"></script>
 	<!--<script src="http://7bv9ya.com1.z0.glb.clouddn.com/jquery.cookie.js"></script>-->
 </head>
 <body>
@@ -58,13 +59,14 @@
 	            <li><a href="#">One more separated link</a></li> -->
 	          </ul>
 	        </li>
+	        <li class="active"> <a href="<?php echo U('Tool/more/zz');?>">正则表达式<span class="sr-only">(current)</span></a></li>
 	      </ul>
-	      <form class="navbar-form navbar-left">
+	      <!-- <form class="navbar-form navbar-left">
 	        <div class="form-group">
 	          <input type="text" class="form-control" placeholder="Search">
 	        </div>
 	        <button type="submit" class="btn btn-default">Submit</button>
-	      </form>
+	      </form> -->
 	      <ul class="nav navbar-nav navbar-right">
 	        <li>
 	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">文档<span class="caret"></span></a>
@@ -86,7 +88,7 @@
 		            <li><a href="http://cssnb.com/iframe/rgb/rgb.html" target="_blank">RGB颜色对照表</a></li>
 		        </ul>
 	        </li>
-	        <li class="dropdown active">
+	        <li class="dropdown [more]">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多	 <span class="caret"></span></a>
 	           <ul class="dropdown-menu">
 		            <li><a href="<?php echo U('Tool/more/icomake');?>">ICO在线生成</a></li>
@@ -106,56 +108,16 @@
 	</nav>
 </div>
 	<!-- <p class="bg-warning msgs">...</p> -->
-	<div class="left_kuang">
-		<div class="left_main">
+	<div class="left_kuang1">
+		<div class="left_main1">
 			<div class="min-title">
-				<h1>字数统计工具</h1>
+				<h1>正则表达式在线测试工具</h1>
 			    <!-- <h3>请在下框输入您要转换的内容:</h3>   -->
 			</div>
 			   <!-- /工具开始 -->
-			<style type="text/css">
-			.num{ font-size:14px; font-weight:700; color:#F00}
-			</style>
-			    
-			    <h3>这是一个快速计算字数和字符数的小工具（小说作者和或编辑必备工具）：</h3>
-			<textarea id="content" name="content" class="toolarea form-control"   rows="8">在线字数统计工欲善其事，必先利其器。显而易见，最高的效率就是对现有材料的最佳利用。学会偷懒，并懒出境界是提高工作效率最有效的方法！工具界 http://www.cssnb.com/2016</textarea>
-			汉字：<span id="zhongwen" class="num">0</span> 个<br />
-			中文标点：<span id="zbiaodian" class="num">0</span> 个<br>汉字+标点：<span id="zhongwenbiaodian" class="num">0</span> 个<br />
-			英文：<span id="yingwen" class="num">0</span> 个 （含英文状态下的数字、符号、标点）<br>
-			数字：<span id="shuzi" class="num">0</span> 个<br />
-			字符总数：<span id="numwords" class="num">0</span> 个字符<br /><br />
-			小贴士：汉字和中文标点算两个字符，数字、空格、英文字母，英文标点算做一个字符。<br />
+			<iframe src="http://cssnb.com/iframe/zhengze/zz.html" style="width: 100%;height:850px;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"></iframe>	
 		</div>
 	</div>
-	<div class="right_kuang" >
-	<div class="right_main">
-		<!-- <strong><center><h4>最新更新</h4></center></strong> -->
-		<div class="panel-heading"><h3 class="widget-title panel-title">最新更新</h3></div>
-		<!-- <hr> -->
-		<div style="margin-left: 15px"><p><a href="<?php echo U('Tool/format/jshtml_format');?>">Javascript/HTML压缩、格式化</a></p>
-		<p><a href="<?php echo U('Tool/format/jsons');?>">JSON 在线解析工具</a></p>
-		<p><a href="<?php echo U('Tool/more/fanyimi');?>">英汉互译</a></p>
-		<p><a href="<?php echo U('Tool/format/xmlzip');?>">XML压缩、格式化</a></p>
-		<p><a href="<?php echo U('Tool/format/csszip');?>">CSS压缩、格式化</a></p></div>
-	</div> 
-	<div class="right_main">
-		
-		<div class="panel-heading"><h3 class="widget-title panel-title">实时热点<span style="float:right;font-size: 10px;margin-top: 10px">搜索指数</span></h3></div>
-		<ul class="list-group">
-		    <li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][1]); ?><span style="float:right"><?php echo ($news['num'][1]); ?>次</span></li>
-			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][2]); ?><span style="float:right"><?php echo ($news['num'][2]); ?>次</span></li>
-			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][3]); ?><span style="float:right"><?php echo ($news['num'][3]); ?>次</span></li>
-			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][4]); ?><span style="float:right"><?php echo ($news['num'][4]); ?>次</span></li>
-			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][5]); ?><span style="float:right"><?php echo ($news['num'][5]); ?>次</span></li>
-		</ul>
-
-	</div>
-	<div class="right_main_min">
-		<div class="panel-heading"><h3 class="widget-title panel-title">每日说说：</h3></div>
-		<div style="margin-left: 15px"><p><h6>我用心去写代码,只为寻觅一个懂我的人！</h6></p></div> 
-
-	</div>
-</div>
 	<div class="button_main">
 	<div class="panel panel-default friend-link yinyin">
 		<div class="panel-heading">友情链接（互换友链联系QQ1113249273，接受程序博客相关站点）</div>
@@ -203,87 +165,5 @@
 	</div>
 </div>
 </div>
-<script language="javascript">
-	function $(id){return document.getElementById(id);}
-	var EventUtil = function(){};
-	EventUtil.addEventHandler = function(obj,EventType,Handler)
-	{
-	//如果是FF
-	if(obj.addEventListener)
-	{
-	   obj.addEventListener(EventType,Handler,false);
-	} 
-	//如果是IE
-	else if(obj.attachEvent)
-	{
-	   obj.attachEvent('on'+EventType,Handler);
-	} 
-	else
-	{
-	   obj['on'+EventType] = Handler;
-	}
-	}
-
-	//alert($("chaptercontent").value);
-	if($("content")){
-	EventUtil.addEventHandler($('content'),'propertychange',CountChineseCharacters);
-	EventUtil.addEventHandler($('content'),'input',CountChineseCharacters);
-	//EventUtil.addEventHandler($('chaptercontent'),'keydown',CountChineseCharacters('chaptercontent'));
-	}
-	window.onload=CountChineseCharacters();
-
-	function showit(Word){
-	alert(Word);
-	}
-	function CountChineseCharacters() {
-	Words=$('content').value;
-		var W = new Object();
-		var Result = new Array();
-		var iNumwords = 0;
-		var sNumwords = 0;
-		var sTotal = 0;//双字节字符;
-		var iTotal = 0;//中文字符；
-		var eTotal = 0;//Ｅ文字符
-		var otherTotal = 0;
-		var bTotal = 0;
-		var inum = 0;
-		
-		for (i=0; i<Words.length; i++) {
-			var c = Words.charAt(i);
-			if (c.match(/[\u4e00-\u9fa5]/)) {
-				if (isNaN(W[c])) {
-					iNumwords++;
-					W[c] = 1;
-				}
-				iTotal++;
-			}
-		}
-
-		for (i=0; i<Words.length; i++) {
-			var c = Words.charAt(i);
-			if (c.match(/[^\x00-\xff]/)) {
-				if (isNaN(W[c])) {
-					sNumwords++;
-
-				}
-				sTotal++;
-			}
-			else
-			{
-			eTotal++;
-			}
-			if (c.match(/[0-9]/)) {
-				inum++;
-			}
-		}
-	//alert(iTotal);
-	$('zhongwen').innerText=iTotal;
-	$('zbiaodian').innerText=sTotal-iTotal;
-	$('zhongwenbiaodian').innerText=sTotal;
-	$('yingwen').innerText=eTotal;
-	$('shuzi').innerText=inum;
-	document.getElementById("numwords").innerHTML=iTotal*2+(sTotal-iTotal)*2+eTotal;
-	}
-	</script>
 </body>
 </html>

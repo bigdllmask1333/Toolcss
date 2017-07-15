@@ -1566,3 +1566,5 @@ function news(){
     $data['num']=$matches3[1];
     return $data;
 }
+
+
