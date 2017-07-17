@@ -60,6 +60,7 @@
 	          </ul>
 	        </li>
 	        <li class="active"> <a href="<?php echo U('Tool/more/zz');?>">正则表达式<span class="sr-only">(current)</span></a></li>
+	        <li class="[download]"> <a href="<?php echo U('Tool/more/download');?>">下载中心<span class="sr-only">(current)</span></a></li>
 	      </ul>
 	      <!-- <form class="navbar-form navbar-left">
 	        <div class="form-group">
@@ -89,8 +90,9 @@
 		        </ul>
 	        </li>
 	        <li class="dropdown [more]">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多	 <span class="caret"></span></a>
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多<span class="caret"></span></a>
 	           <ul class="dropdown-menu">
+		            <li><a href="<?php echo U('Tool/more/duibi');?>">代码对比/归并</a></li>
 		            <li><a href="<?php echo U('Tool/more/icomake');?>">ICO在线生成</a></li>
 		            <li><a href="<?php echo U('Tool/more/zishu');?>">字数统计工具</a></li>
 		            <li><a href="<?php echo U('Tool/more/quc');?>">在线去重工具</a></li>
@@ -122,6 +124,7 @@
 	<div class="panel panel-default friend-link yinyin">
 		<div class="panel-heading">友情链接（互换友链联系QQ1113249273，接受程序博客相关站点）</div>
 		<div class="panel-body">
+		 	<a href="http://baijunyao.com/" title="白俊遥博客" target="_blank">白俊遥博客</a>&nbsp;
 		    <a href="http://forum.laravelacademy.org" title="Laravel学院后花园和讨论区" target="_blank">Laravel学堂</a>&nbsp;&nbsp;
 		    <a href="http://www.phpchina.com" title="最棒的PHP中文社区" target="_blank">PHPChina</a>&nbsp;
 		    <!--<a href="http://laravel.so" title="Laravel技巧" target="_blank">Laravel.so</a>&nbsp;--> 
@@ -152,7 +155,7 @@
 		    <a href="http://blog.tanteng.me/" title="一个专注现代化PHP开发的博客" target="_blank">小谈博客</a>&nbsp;
 		    <a href="http://www.iwanli.me/" title="i晚黎博客致力于提供优质学习资源,分享个人笔记" target="_blank">i晚黎</a>&nbsp;
 		    <a href="https://easywechat.org/" title="让微信开发更简单" target="_blank">EasyWeChat</a>&nbsp; 
-		    <a href="http://baijunyao.com/" title="白俊遥博客" target="_blank">白俊遥博客</a>&nbsp;
+		   
 		    <a href="http://www.maijindou.com/" title="magento" target="_blank">Magento</a>&nbsp;
 		    <a href="http://blog.moocfans.cn/" title="慕课爱好者的博客" target="_blank">MoocFans</a>&nbsp;
 		<a href="http://www.mysubmail.com" title="短信平台" target="_blank">短信平台</a>&nbsp;

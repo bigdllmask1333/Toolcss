@@ -72,8 +72,12 @@ class MoreController extends Controller {
     public function zz(){
         $this->display();
     }
-     //正则表达式
+     //对比
     public function duibi(){
+        $this->display();
+    }
+    //下载中心
+    public function download(){
         $this->display();
     }
 }

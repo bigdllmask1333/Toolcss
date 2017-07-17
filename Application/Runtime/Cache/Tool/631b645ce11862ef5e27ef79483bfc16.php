@@ -3,18 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
-	<title>XML压缩-^(*￣(oo)￣)^</title>
+	<title>工具界-CssNb</title>
 	<meta name="keywords" content="在线,CSS,CSS 校验,格式化,xml转json 工具,在线工具,json视图,可视化,程序,服务器,域名注册,正则表达式,测试,在线json格式化工具,json 格式化,json格式化工具,json字符串格式化,json 在线查看器,json在线,json 在线验证,json tools online,在线文字对比工具" />
 		<meta name="description" content="在线,CSS,CSS 校验,格式化,xml转json 工具,在线工具,json视图,可视化,程序,服务器,域名注册,正则表达式,测试,在线json格式化工具,json 格式化,json格式化工具,json字符串格式化,json 在线查看器,json在线,json 在线验证,json tools online,在线文字对比工具">
 	<script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
-	<script type="text/javascript" src="/Public/statics/layer/layer.js"></script>
 	<link href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 	<script src="//cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="/Public/statics/self/css/main.css">
-	<link href="/Public/statics/self/css/theme.css" rel="stylesheet">
+	<script type="text/javascript" src="/Public/statics/format/jshtml/base.js"></script>
+	<script type="text/javascript" src="/Public/statics/format/jshtml/htmlformat.js"></script>
+	<script type="text/javascript" src="/Public/statics/format/jshtml/jsformat.js"></script>
+	<script type="text/javascript" src="/Public/statics/layer/layer.js"></script>
 	<!--<script src="http://7bv9ya.com1.z0.glb.clouddn.com/jquery.cookie.js"></script>-->
 </head>
 <body>
+<div class="container-fluid">
 	<div class="navs">
 	<nav class="navbar navbar-default">
 	<!-- <nav class="navbar navbar-inverse">   黑色 --> 
@@ -43,7 +46,7 @@
 		        	<li><a href="<?php echo U('Tool/mi/escapemi');?>">Escape加密/解密工具</a></li>
 	        	</ul>
         	</li>
-	        <li    class="dropdown active">
+	        <li    class="dropdown [keywords]">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">格式化 <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
 	            <li><a href="<?php echo U('Tool/format/jshtml_format');?>">Javascript/HTML压缩、格式化</a></li>
@@ -57,7 +60,7 @@
 	          </ul>
 	        </li>
 	        <li class="[zhengze]"> <a href="<?php echo U('Tool/more/zz');?>">正则表达式<span class="sr-only">(current)</span></a></li>
-	        <li class="[download]"> <a href="<?php echo U('Tool/more/download');?>">下载中心<span class="sr-only">(current)</span></a></li>
+	        <li class="active"> <a href="<?php echo U('Tool/more/download');?>">下载中心<span class="sr-only">(current)</span></a></li>
 	      </ul>
 	      <!-- <form class="navbar-form navbar-left">
 	        <div class="form-group">
@@ -107,93 +110,40 @@
 	</nav>
 </div>
 	<!-- <p class="bg-warning msgs">...</p> -->
-	<div class="left_kuang">
-		<div class="left_main">
-			<div class="min-title"	>
-				<h1>XML压缩/格式化工具</h1>
+	<div class="left_kuang1">
+		<div class="left_main1">
+			<div class="min-title">
+				<h1>常用编程软件下载</h1>
+			    <!-- <h3>请在下框输入您要转换的内容:</h3>   -->
 			</div>
-			<div class="container-fluid">
-		      <!-- container-fluid -->
-		      <div class="row">
-		        <div class="col-md-9">
-		          <span class="jbTestPos" id="advtop">
-		          </span>
-		          <!-- Nav tabs -->
-		          <!-- Tab panes -->
-		          <div class="tab-content">
-		            <div class="tab-pane active" id="home">
-		              <p>
-		              </p>
-		              <form role="form" onsubmit="return false;">
-		                <div class="form-group">
-		                  <label class="sr-only" for="code"></label>
-		                  <textarea class="form-control" rows="8" placeholder="待压缩、格式化的CSS代码" id="code">
-		                  </textarea>
-		                </div>
-		                <div class="form-group">
-		                  <button type="submit" class="btn btn-primary" onclick="pack()">
-		                    转为数组
-		                  </button>
-		                  <button type="submit" class="btn btn-danger" onclick="pack()">
-		                    转为XML
-		                  </button>
-		                  <button type="submit" class="btn btn-info" onclick="packNor()">
-		                    普通压缩
-		                  </button>
-		                  <button type="submit" class="btn btn-warning" onclick="format()">
-		                    格式化
-		                  </button>
-		                </div>
-		                <div class="form-group">
-		                  <label class="sr-only" for="packer"></label>
-		                  <textarea class="form-control" rows="8" placeholder="处理后的CSS代码" id="packer">
-		                  </textarea>
-		                </div>
-		              </form>
-		              <script type="text/javascript">
-		                
-		              </script>
-		            </div>
-
-		          </div>
-		        </div>
-		      </div>
-		    </div>
-			
+			   <!-- /工具开始 -->
+			<div style="width: 100%;height:850px;">
+				<span><h4>编程 工具大全（工具整理中）</h4></span>
+				<hr>
+				<button type="button" class="btn btn-primary" onclick="d1()" title="完美解决vm虚拟机清理不干净而导致不能装新的虚拟机的困扰">vmclean</button>
+				<button type="button" class="btn btn-primary" onclick="d2()" title="">vc14_x86</button>
+				<button type="button" class="btn btn-primary" onclick="d3()" title="">软件多开</button>
+				<button type="button" class="btn btn-primary" onclick="d4()" title="">postman</button>
+				<button type="button" class="btn btn-primary" onclick="d5()" title="">navicat</button>
+				<button type="button" class="btn btn-primary" onclick="d6()" title="">仿站工具</button>
+				<button type="button" class="btn btn-primary" onclick="d7()" title="">sublime_x32</button>
+				<button type="button" class="btn btn-primary" onclick="d8()" title="">sublime_x64</button>
+				<button type="button" class="btn btn-primary" onclick="d9()" title="">3600次鼠标连点器</button>
+				<button type="button" class="btn btn-primary" onclick="d10()" title="">网页自动刷新工具</button>
+				<!-- <button type="button" class="btn btn-primary" onclick="d1()">vmclean</button> -->
+				<hr>
+			</div>
 		</div>
 	</div>
-	<div class="right_kuang" >
-	<div class="right_main">
-		<!-- <strong><center><h4>最新更新</h4></center></strong> -->
-		<div class="panel-heading"><h3 class="widget-title panel-title">最新更新</h3></div>
-		<!-- <hr> -->
-		<div style="margin-left: 15px"><p><a href="<?php echo U('Tool/format/jshtml_format');?>">Javascript/HTML压缩、格式化</a></p>
-		<p><a href="<?php echo U('Tool/format/jsons');?>">JSON 在线解析工具</a></p>
-		<p><a href="<?php echo U('Tool/more/fanyimi');?>">英汉互译</a></p>
-		<p><a href="<?php echo U('Tool/format/xmlzip');?>">XML压缩、格式化</a></p>
-		<p><a href="<?php echo U('Tool/format/csszip');?>">CSS压缩、格式化</a></p></div>
-	</div> 
-	<div class="right_main">
-		
-		<div class="panel-heading"><h3 class="widget-title panel-title">实时热点<span style="float:right;font-size: 10px;margin-top: 10px">搜索指数</span></h3></div>
-		<ul class="list-group">
-		    <li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][1]); ?><span style="float:right"><?php echo ($news['num'][1]); ?>次</span></li>
-			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][2]); ?><span style="float:right"><?php echo ($news['num'][2]); ?>次</span></li>
-			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][3]); ?><span style="float:right"><?php echo ($news['num'][3]); ?>次</span></li>
-			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][4]); ?><span style="float:right"><?php echo ($news['num'][4]); ?>次</span></li>
-			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][5]); ?><span style="float:right"><?php echo ($news['num'][5]); ?>次</span></li>
-		</ul>
-
-	</div>
-	<div class="right_main_min">
-		<div class="panel-heading"><h3 class="widget-title panel-title">每日说说：</h3></div>
-		<div style="margin-left: 15px"><p><h6>我用心去写代码,只为寻觅一个懂我的人！</h6></p></div> 
-
-	</div>
-</div>
 	<div class="button_main">
 	<div class="panel panel-default friend-link yinyin">
-		<div class="panel-heading">友情链接（互换友链联系QQ1113249273，接受程序博客相关站点）</div>
+		<div class="panel-heading">友情链接（互换友链联系QQ1113249273，接受程序博客相关站点）
+		<!-- 网站统计 -->
+		<span style="float: right;">
+			<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1262899837'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1262899837%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+		</span>
+		<!-- 网站统计 -->
+		</div>
 		<div class="panel-body">
 		 	<a href="http://baijunyao.com/" title="白俊遥博客" target="_blank">白俊遥博客</a>&nbsp;
 		    <a href="http://forum.laravelacademy.org" title="Laravel学院后花园和讨论区" target="_blank">Laravel学堂</a>&nbsp;&nbsp;
@@ -238,5 +188,79 @@
 		</div>
 	</div>
 </div>
+
+</div>
+<script type="text/javascript">
+function d1(){
+	layer.alert('链：http://pan.baidu.com/s/1kVp7kVX        密：tm2l', {
+	  skin: 'layui-layer-molv' //样式类名
+	  ,closeBtn: 0,
+	  title:'vmclean下载链接',
+	});
+}
+function d2(){
+	layer.alert('链：http://pan.baidu.com/s/1o8LVg2u        密：a6fi', {
+	  skin: 'layui-layer-molv' //样式类名
+	  ,closeBtn: 0,
+	  title:'vc14_x86下载链接',
+	});
+}
+function d3(){
+	layer.alert('链：http://pan.baidu.com/s/1pLgBAXH        密：0y48', {
+	  skin: 'layui-layer-molv' //样式类名
+	  ,closeBtn: 0,
+	  title:'软件多开下载链接',
+	});
+}
+function d4(){
+	layer.alert('链：http://pan.baidu.com/s/1o8DN6l0        密：zyur', {
+	  skin: 'layui-layer-molv' //样式类名
+	  ,closeBtn: 0,
+	  title:'postman下载链接',
+	});
+}
+function d5(){
+	layer.alert('链：http://pan.baidu.com/s/1qX8dD2s        密：5lgm', {
+	  skin: 'layui-layer-molv' //样式类名
+	  ,closeBtn: 0,
+	  title:'navicat下载链接',
+	});
+}
+function d6(){
+	layer.alert('链：http://pan.baidu.com/s/1qXGlieK       密：i8r7', {
+	  skin: 'layui-layer-molv' //样式类名
+	  ,closeBtn: 0,
+	  title:'仿站工具下载链接',
+	});
+}
+function d7(){
+	layer.alert('链：http://pan.baidu.com/s/1crlz7w       密：mv4x', {
+	  skin: 'layui-layer-molv' //样式类名
+	  ,closeBtn: 0,
+	  title:'sublime_x32下载链接',
+	});
+}
+function d8(){
+	layer.alert('链：http://pan.baidu.com/s/1bpdCn2B      密：mk57', {
+	  skin: 'layui-layer-molv' //样式类名
+	  ,closeBtn: 0,
+	  title:'sublime_x64下载链接',
+	});
+}
+function d9(){
+	layer.alert('链：http://pan.baidu.com/s/1c2MV0pa      密：41id', {
+	  skin: 'layui-layer-molv' //样式类名
+	  ,closeBtn: 0,
+	  title:'鼠标连点器下载链接',
+	});
+}
+function d10(){
+	layer.alert('链：http://pan.baidu.com/s/1dFs1rR7    密：6o1f', {
+	  skin: 'layui-layer-molv' //样式类名
+	  ,closeBtn: 0,
+	  title:'自动刷新工具下载链接',
+	});
+}
+</script>
 </body>
 </html>
