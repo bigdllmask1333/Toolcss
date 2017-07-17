@@ -144,7 +144,6 @@
 		<p><a href="<?php echo U('Tool/format/csszip');?>">CSS压缩、格式化</a></p></div>
 	</div> 
 	<div class="right_main">
-		
 		<div class="panel-heading"><h3 class="widget-title panel-title">实时热点<span style="float:right;font-size: 10px;margin-top: 10px">搜索指数</span></h3></div>
 		<ul class="list-group">
 		    <li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][1]); ?><span style="float:right"><?php echo ($news['num'][1]); ?>次</span></li>
@@ -153,7 +152,6 @@
 			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][4]); ?><span style="float:right"><?php echo ($news['num'][4]); ?>次</span></li>
 			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][5]); ?><span style="float:right"><?php echo ($news['num'][5]); ?>次</span></li>
 		</ul>
-
 	</div>
 	<div class="right_main_min">
 		<div class="panel-heading"><h3 class="widget-title panel-title">每日说说：</h3></div>
@@ -163,7 +161,13 @@
 </div>
 	<div class="button_main">
 	<div class="panel panel-default friend-link yinyin">
-		<div class="panel-heading">友情链接（互换友链联系QQ1113249273，接受程序博客相关站点）</div>
+		<div class="panel-heading">友情链接（互换友链联系QQ1113249273，接受程序博客相关站点）
+		<!-- 网站统计 -->
+		<span style="float: right;">
+			<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1262899837'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1262899837%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+		</span>
+		<!-- 网站统计 -->
+		</div>
 		<div class="panel-body">
 		 	<a href="http://baijunyao.com/" title="白俊遥博客" target="_blank">白俊遥博客</a>&nbsp;
 		    <a href="http://forum.laravelacademy.org" title="Laravel学院后花园和讨论区" target="_blank">Laravel学堂</a>&nbsp;&nbsp;

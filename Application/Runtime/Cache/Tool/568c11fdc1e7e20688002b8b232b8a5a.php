@@ -122,7 +122,13 @@
 	</div>
 	<div class="button_main">
 	<div class="panel panel-default friend-link yinyin">
-		<div class="panel-heading">友情链接（互换友链联系QQ1113249273，接受程序博客相关站点）</div>
+		<div class="panel-heading">友情链接（互换友链联系QQ1113249273，接受程序博客相关站点）
+		<!-- 网站统计 -->
+		<span style="float: right;">
+			<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1262899837'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1262899837%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+		</span>
+		<!-- 网站统计 -->
+		</div>
 		<div class="panel-body">
 		 	<a href="http://baijunyao.com/" title="白俊遥博客" target="_blank">白俊遥博客</a>&nbsp;
 		    <a href="http://forum.laravelacademy.org" title="Laravel学院后花园和讨论区" target="_blank">Laravel学堂</a>&nbsp;&nbsp;
