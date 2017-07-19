@@ -27,7 +27,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="<?php echo U('Tool/index/index');?>">公猪界</a>
+	      <a class="navbar-brand" href="<?php echo U('Tool/index/index');?>">工具界</a>
 	    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -59,6 +59,9 @@
 	        </li>
 	        <li class="[zhengze]"> <a href="<?php echo U('Tool/more/zz');?>">正则表达式<span class="sr-only">(current)</span></a></li>
 	        <li class="[download]"> <a href="<?php echo U('Tool/more/download');?>">下载中心<span class="sr-only">(current)</span></a></li>
+	        <li class="[download]"> <a href="https://mart.coding.net/projects" target="_blank">代码交易市场<span class="sr-only">(current)</span></a></li>
+
+
 	      </ul>
 	      <!-- <form class="navbar-form navbar-left">
 	        <div class="form-group">
@@ -103,7 +106,7 @@
 		        </ul>
 	        </li>
 	        <li><a href="http://cssnb.com/iframe/woman/chatwoman.html" target="_blank">美人儿<span class="sr-only">(current)</span></a></li>
-	        <li><a href="<?php echo U('Tool/more/duibi');?>" >留言板</a></li>
+	        <li class="[liu]"><a href="<?php echo U('Tool/more/message');?>" >留言板</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
