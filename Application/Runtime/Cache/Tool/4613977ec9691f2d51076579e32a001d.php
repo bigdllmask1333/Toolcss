@@ -14,6 +14,7 @@
 	<!--<script src="http://7bv9ya.com1.z0.glb.clouddn.com/jquery.cookie.js"></script>-->
 </head>
 <body>
+<div class="container-fluid">
 	<div class="navs">
 	<nav class="navbar navbar-default">
 	<!-- <nav class="navbar navbar-inverse">   黑色 --> 
@@ -32,22 +33,20 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-	        <li><a href="#">编码/加密 <span class="sr-only">(current)</span></a></li>
+	        <li class="[erweima]"> <a href="<?php echo U('Tool/index/twoma');?>">二维码生成<span class="sr-only">(current)</span></a></li>
 	        <!-- <li><a href="#">翻译 <span class="sr-only">(current)</span></a></li> -->
-	        <li>
-	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">网络 <span class="caret"></span></a>
+	        <li class="[mi]">
+	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">编码/加密 <span class="caret"></span></a>
 	        	<ul class="dropdown-menu">
-		        	<li><a href="#">获取你的IP</a></li>
-		        	<li><a href="#">获取IP信息</a></li>
-		        	<li><a href="#">IP定位周边信息</a></li>
-		        	<li><a href="#">获取您的浏览器信息</a></li>
-		        	<li><a href="#">常用USER_AGENT</a></li>
-		        	<li><a href="#">TCP/IP子网掩码计算换算</a></li>
+		        	<li><a href="<?php echo U('Tool/mi/mi5');?>">MD5加密工具</a></li>
+		        	<li><a href="<?php echo U('Tool/mi/urlmi');?>">URL网址16进制加密工具</a></li>
+		        	<li><a href="<?php echo U('Tool/mi/escapemi');?>">Escape加密/解密工具</a></li>
 	        	</ul>
         	</li>
 	        <li    class="dropdown [keywords]">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">格式化 <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
+	            <li><a href="<?php echo U('Tool/format/unicode');?>">在线Unicode编码转换</a></li>
 	            <li><a href="<?php echo U('Tool/format/jshtml_format');?>">Javascript/HTML压缩、格式化</a></li>
 	            <li><a href="<?php echo U('Tool/format/csszip');?>">CSS压缩、格式化</a></li>
 	            <li><a href="<?php echo U('Tool/format/xmlzip');?>">XML压缩、格式化</a></li>
@@ -58,18 +57,21 @@
 	            <li><a href="#">One more separated link</a></li> -->
 	          </ul>
 	        </li>
+	        <li class="[zhengze]"> <a href="<?php echo U('Tool/more/zz');?>">正则表达式<span class="sr-only">(current)</span></a></li>
+	        <li class="[download]"> <a href="<?php echo U('Tool/more/download');?>">下载中心<span class="sr-only">(current)</span></a></li>
 	      </ul>
-	      <form class="navbar-form navbar-left">
+	      <!-- <form class="navbar-form navbar-left">
 	        <div class="form-group">
 	          <input type="text" class="form-control" placeholder="Search">
 	        </div>
 	        <button type="submit" class="btn btn-default">Submit</button>
-	      </form>
+	      </form> -->
 	      <ul class="nav navbar-nav navbar-right">
 	        <li>
 	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">文档<span class="caret"></span></a>
 				
 		        <ul class="dropdown-menu">
+		            <li><a href="https://doub.bid/vps-tj/" target="_blank">便宜VPN推荐</a></li>
 		            <li><a href="http://www.bejson.com/apidoc/jquery/" target="_blank">JQuery文档</a></li>
 		            <li><a href="http://v3.bootcss.com/components/" target="_blank">Bootstrap文档</a></li>
 		            <li><a href="https://cn.vuejs.org/v2/api/" target="_blank">vuejs</a></li>
@@ -83,18 +85,25 @@
 		            <li><a href="https://docs.open.alipay.com/399" target="_blank">支付宝开发商文档</a></li>
 		             <li role="separator" class="divider"></li>
 		            <li><a href="http://www.runoob.com/try/bootstrap/layoutit/" target="_blank">Bootstrap可视化布局</a></li>
+		            <li><a href="http://cssnb.com/iframe/rgb/rgb.html" target="_blank">RGB颜色对照表</a></li>
 		        </ul>
 	        </li>
 	        <li class="dropdown active">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多	 <span class="caret"></span></a>
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多<span class="caret"></span></a>
 	           <ul class="dropdown-menu">
-		            <li><a href="#">Action</a></li>
-		            <li><a href="#">Another action</a></li>
-		            <li><a href="#">Something else here</a></li>
+		            <li><a href="<?php echo U('Tool/more/duibi');?>">代码对比/归并</a></li>
+		            <li><a href="<?php echo U('Tool/more/icomake');?>">ICO在线生成</a></li>
+		            <li><a href="<?php echo U('Tool/more/zishu');?>">字数统计工具</a></li>
+		            <li><a href="<?php echo U('Tool/more/quc');?>">在线去重工具</a></li>
+		            <li><a href="<?php echo U('Tool/more/papapa');?>">计算男女交往几天可以啪啪啪</a></li>
+		         <!--    <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li> -->
 		            <li role="separator" class="divider"></li>
 		            <li><a href="<?php echo U('Tool/more/fanyimi');?>">英汉互译</a></li>
 		        </ul>
 	        </li>
+	        <li><a href="http://cssnb.com/iframe/woman/chatwoman.html" target="_blank">美人儿<span class="sr-only">(current)</span></a></li>
+	        <li><a href="<?php echo U('Tool/more/duibi');?>" >留言板</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
@@ -134,7 +143,6 @@
 		<p><a href="<?php echo U('Tool/format/csszip');?>">CSS压缩、格式化</a></p></div>
 	</div> 
 	<div class="right_main">
-		
 		<div class="panel-heading"><h3 class="widget-title panel-title">实时热点<span style="float:right;font-size: 10px;margin-top: 10px">搜索指数</span></h3></div>
 		<ul class="list-group">
 		    <li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][1]); ?><span style="float:right"><?php echo ($news['num'][1]); ?>次</span></li>
@@ -143,18 +151,24 @@
 			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][4]); ?><span style="float:right"><?php echo ($news['num'][4]); ?>次</span></li>
 			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][5]); ?><span style="float:right"><?php echo ($news['num'][5]); ?>次</span></li>
 		</ul>
-
 	</div>
 	<div class="right_main_min">
 		<div class="panel-heading"><h3 class="widget-title panel-title">每日说说：</h3></div>
-		<div style="margin-left: 15px"><p><h6>我用心去写代码,只为寻觅一个懂我的人！</h6></p></div> 
+		<div style="margin-left: 15px"><p><h6>成功离你很近的，坚持！</h6></p></div> 
 
 	</div>
 </div>
 	<div class="button_main">
 	<div class="panel panel-default friend-link yinyin">
-		<div class="panel-heading">友情链接（互换友链联系QQ1113249273，接受程序博客相关站点）</div>
+		<div class="panel-heading">友情链接（互换友链联系QQ1113249273，接受程序博客相关站点）
+		<!-- 网站统计 -->
+		<span style="float: right;">
+			<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1262899837'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1262899837%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+		</span>
+		<!-- 网站统计 -->
+		</div>
 		<div class="panel-body">
+		 	<a href="http://baijunyao.com/" title="白俊遥博客" target="_blank">白俊遥博客</a>&nbsp;
 		    <a href="http://forum.laravelacademy.org" title="Laravel学院后花园和讨论区" target="_blank">Laravel学堂</a>&nbsp;&nbsp;
 		    <a href="http://www.phpchina.com" title="最棒的PHP中文社区" target="_blank">PHPChina</a>&nbsp;
 		    <!--<a href="http://laravel.so" title="Laravel技巧" target="_blank">Laravel.so</a>&nbsp;--> 
@@ -185,7 +199,7 @@
 		    <a href="http://blog.tanteng.me/" title="一个专注现代化PHP开发的博客" target="_blank">小谈博客</a>&nbsp;
 		    <a href="http://www.iwanli.me/" title="i晚黎博客致力于提供优质学习资源,分享个人笔记" target="_blank">i晚黎</a>&nbsp;
 		    <a href="https://easywechat.org/" title="让微信开发更简单" target="_blank">EasyWeChat</a>&nbsp; 
-		    <a href="http://baijunyao.com/" title="白俊遥博客" target="_blank">白俊遥博客</a>&nbsp;
+		   
 		    <a href="http://www.maijindou.com/" title="magento" target="_blank">Magento</a>&nbsp;
 		    <a href="http://blog.moocfans.cn/" title="慕课爱好者的博客" target="_blank">MoocFans</a>&nbsp;
 		<a href="http://www.mysubmail.com" title="短信平台" target="_blank">短信平台</a>&nbsp;
@@ -232,5 +246,6 @@
 				})
 			// })
 	</script>
+	</div>
 </body>
 </html>

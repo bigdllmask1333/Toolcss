@@ -9,7 +9,7 @@ class IndexController extends Controller {
         $this->assign('news',$news);        
     }
     public function index(){
-    	import('Common.Juheip.Ip');
+    	import('Common.Juheip.Ip'); 
 		$object = new Ip();
 		$ip=get_client_ip();
     	$content=$object->Ip_area($ip);

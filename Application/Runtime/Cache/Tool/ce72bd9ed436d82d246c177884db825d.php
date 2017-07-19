@@ -46,6 +46,7 @@
 	        <li    class="dropdown [keywords]">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">格式化 <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
+	            <li><a href="<?php echo U('Tool/format/unicode');?>">在线Unicode编码转换</a></li>
 	            <li><a href="<?php echo U('Tool/format/jshtml_format');?>">Javascript/HTML压缩、格式化</a></li>
 	            <li><a href="<?php echo U('Tool/format/csszip');?>">CSS压缩、格式化</a></li>
 	            <li><a href="<?php echo U('Tool/format/xmlzip');?>">XML压缩、格式化</a></li>
@@ -70,6 +71,7 @@
 	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">文档<span class="caret"></span></a>
 				
 		        <ul class="dropdown-menu">
+		            <li><a href="https://doub.bid/vps-tj/" target="_blank">便宜VPN推荐</a></li>
 		            <li><a href="http://www.bejson.com/apidoc/jquery/" target="_blank">JQuery文档</a></li>
 		            <li><a href="http://v3.bootcss.com/components/" target="_blank">Bootstrap文档</a></li>
 		            <li><a href="https://cn.vuejs.org/v2/api/" target="_blank">vuejs</a></li>
@@ -101,6 +103,7 @@
 		        </ul>
 	        </li>
 	        <li><a href="http://cssnb.com/iframe/woman/chatwoman.html" target="_blank">美人儿<span class="sr-only">(current)</span></a></li>
+	        <li><a href="<?php echo U('Tool/more/duibi');?>" >留言板</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
@@ -174,7 +177,7 @@
 	</div>
 	<div class="right_main_min">
 		<div class="panel-heading"><h3 class="widget-title panel-title">每日说说：</h3></div>
-		<div style="margin-left: 15px"><p><h6>我用心去写代码,只为寻觅一个懂我的人！</h6></p></div> 
+		<div style="margin-left: 15px"><p><h6>成功离你很近的，坚持！</h6></p></div> 
 
 	</div>
 </div>

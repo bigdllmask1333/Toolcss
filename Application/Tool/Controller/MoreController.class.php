@@ -80,4 +80,8 @@ class MoreController extends Controller {
     public function download(){
         $this->display();
     }
+     //下载中心
+    public function message(){
+        $this->display();
+    }
 }
