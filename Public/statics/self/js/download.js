@@ -69,12 +69,13 @@ function d10(){
 	});
 }
 function d11(){
-	layer.alert('链：http://pan.baidu.com/s/1bX8Mi6    密：ma9x', {
+	layer.alert('链：http://pan.baidu.com/s/1cIpWuE    密：7omm', {
 	  skin: 'layui-layer-molv' //样式类名
 	  ,closeBtn: 0,
 	  title:'Composer下载链接',
 	});
 }
+
 function d12(){
 	layer.alert('链：http://pan.baidu.com/s/1pLbmcRL    密：rlxn', {
 	  skin: 'layui-layer-molv' //样式类名
