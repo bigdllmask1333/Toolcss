@@ -30,13 +30,13 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="<?php echo U('Tool/index/index');?>">公猪界</a>
+	      <a class="navbar-brand" href="<?php echo U('Tool/index/index');?>">工具界</a>
 	    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-	        <li class="[erweima]"> <a href="<?php echo U('Tool/index/twoma');?>">二维码生成<span class="sr-only">(current)</span></a></li>
+	     
 	        <!-- <li><a href="#">翻译 <span class="sr-only">(current)</span></a></li> -->
 	        <li class="[mi]">
 	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">编码/加密 <span class="caret"></span></a>
@@ -49,6 +49,7 @@
 	        <li    class="dropdown [keywords]">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">格式化 <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
+	            <li><a href="<?php echo U('Tool/format/unicode');?>">在线Unicode编码转换</a></li>
 	            <li><a href="<?php echo U('Tool/format/jshtml_format');?>">Javascript/HTML压缩、格式化</a></li>
 	            <li><a href="<?php echo U('Tool/format/csszip');?>">CSS压缩、格式化</a></li>
 	            <li><a href="<?php echo U('Tool/format/xmlzip');?>">XML压缩、格式化</a></li>
@@ -59,8 +60,11 @@
 	            <li><a href="#">One more separated link</a></li> -->
 	          </ul>
 	        </li>
-	        <li class="active"> <a href="<?php echo U('Tool/more/zz');?>">正则表达式<span class="sr-only">(current)</span></a></li>
+	        
 	        <li class="[download]"> <a href="<?php echo U('Tool/more/download');?>">下载中心<span class="sr-only">(current)</span></a></li>
+	        <!-- <li> <a href="https://mart.coding.net/projects" target="_blank">代码交易市场<span class="sr-only">(current)</span></a></li> -->
+
+
 	      </ul>
 	      <!-- <form class="navbar-form navbar-left">
 	        <div class="form-group">
@@ -73,6 +77,15 @@
 	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">文档<span class="caret"></span></a>
 				
 		        <ul class="dropdown-menu">
+		            <li><a href="https://openhome.alipay.com/platform/appDaily.htm" target="_blank">沙箱</a></li>
+		            <li><a href="https://openclub.alipay.com/index.php" target="_blank">支付源码</a></li>
+		            <li><a href="https://docs.open.alipay.com/54/" target="_blank">支付资源下载</a></li>
+		            <li><a href="http://www.12kanshu.com/" target="_blank">免费小说1（含所有起点付费小说）</a></li>
+		            <li><a href="http://www.ixdzs.com" target="_blank">免费小说2（含所有起点付费小说）</a></li>
+		            <!-- <li><a href="http://www.php.cn/course/332.html" target="_blank">博客开发</a></li> -->
+		            <li><a href="http://laravelacademy.org" target="_blank">Laravel学院</a></li>
+		            <li><a href="https://php.golaravel.com/" target="_blank">PHP手册</a></li>
+		            <li><a href="https://doub.bid/vps-tj/" target="_blank">便宜VPN推荐</a></li>
 		            <li><a href="http://www.bejson.com/apidoc/jquery/" target="_blank">JQuery文档</a></li>
 		            <li><a href="http://v3.bootcss.com/components/" target="_blank">Bootstrap文档</a></li>
 		            <li><a href="https://cn.vuejs.org/v2/api/" target="_blank">vuejs</a></li>
@@ -89,9 +102,12 @@
 		            <li><a href="http://cssnb.com/iframe/rgb/rgb.html" target="_blank">RGB颜色对照表</a></li>
 		        </ul>
 	        </li>
-	        <li class="dropdown [more]">
+	        <li class="[document]"><a href="<?php echo U('Tool/more/document');?>" >文档大全</a></li>
+	        <li class="dropdown active">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多<span class="caret"></span></a>
 	           <ul class="dropdown-menu">
+	              	<li> <a href="<?php echo U('Tool/index/twoma');?>">二维码生成</a></li>
+	           		<li> <a href="<?php echo U('Tool/more/zz');?>">正则表达式</a></li>
 		            <li><a href="<?php echo U('Tool/more/duibi');?>">代码对比/归并</a></li>
 		            <li><a href="<?php echo U('Tool/more/icomake');?>">ICO在线生成</a></li>
 		            <li><a href="<?php echo U('Tool/more/zishu');?>">字数统计工具</a></li>
@@ -104,6 +120,7 @@
 		        </ul>
 	        </li>
 	        <li><a href="http://cssnb.com/iframe/woman/chatwoman.html" target="_blank">美人儿<span class="sr-only">(current)</span></a></li>
+	        <li class="[liu]"><a href="<?php echo U('Tool/more/message');?>" >心情</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->

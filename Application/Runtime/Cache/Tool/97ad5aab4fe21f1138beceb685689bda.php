@@ -15,6 +15,9 @@
 	<script type="text/javascript" src="/Public/statics/format/jshtml/jsformat.js"></script>
 	<script type="text/javascript" src="/Public/statics/layer/layer.js"></script>
 	<!--<script src="http://7bv9ya.com1.z0.glb.clouddn.com/jquery.cookie.js"></script>-->
+	<style type="text/css">
+		.mtop{margin:3px 3px;}
+	</style>
 </head>
 <body>
 <div class="container-fluid">
@@ -36,7 +39,7 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-	        <li class="[erweima]"> <a href="<?php echo U('Tool/index/twoma');?>">二维码生成<span class="sr-only">(current)</span></a></li>
+	     
 	        <!-- <li><a href="#">翻译 <span class="sr-only">(current)</span></a></li> -->
 	        <li class="[mi]">
 	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">编码/加密 <span class="caret"></span></a>
@@ -73,39 +76,12 @@
 	        <button type="submit" class="btn btn-default">Submit</button>
 	      </form> -->
 	      <ul class="nav navbar-nav navbar-right">
-	        <li>
-	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">文档<span class="caret"></span></a>
-				
-		        <ul class="dropdown-menu">
-		            <li><a href="https://openhome.alipay.com/platform/appDaily.htm" target="_blank">沙箱</a></li>
-		            <li><a href="https://openclub.alipay.com/index.php" target="_blank">支付源码</a></li>
-		            <li><a href="https://docs.open.alipay.com/54/" target="_blank">支付资源下载</a></li>
-		            <li><a href="http://www.12kanshu.com/" target="_blank">免费小说1（含所有起点付费小说）</a></li>
-		            <li><a href="http://www.ixdzs.com" target="_blank">免费小说2（含所有起点付费小说）</a></li>
-		            <!-- <li><a href="http://www.php.cn/course/332.html" target="_blank">博客开发</a></li> -->
-		            <li><a href="http://laravelacademy.org" target="_blank">Laravel学院</a></li>
-		            <li><a href="https://php.golaravel.com/" target="_blank">PHP手册</a></li>
-		            <li><a href="https://doub.bid/vps-tj/" target="_blank">便宜VPN推荐</a></li>
-		            <li><a href="http://www.bejson.com/apidoc/jquery/" target="_blank">JQuery文档</a></li>
-		            <li><a href="http://v3.bootcss.com/components/" target="_blank">Bootstrap文档</a></li>
-		            <li><a href="https://cn.vuejs.org/v2/api/" target="_blank">vuejs</a></li>
-		            <li role="separator" class="divider"></li>
-		            <li><a href="http://wiki.open.qq.com/wiki/%E9%A6%96%E9%A1%B5" target="_blank">腾讯开发平台</a></li>
-		            <li><a href="https://mp.weixin.qq.com/wiki" target="_blank">微信公众平台开发文档</a></li>
-		            <li><a href="https://pay.weixin.qq.com/wiki/doc/api/index.html" target="_blank">微信支付开发文档</a></li>
-		             <li role="separator" class="divider"></li>
-		            <li><a href="http://open.taobao.com/doc2/apiList.htm" target="_blank">淘宝开发文档</a></li>
-		            <li><a href="https://doc.open.alipay.com/doc2/alipayDocIndex.htm" target="_blank">支付宝开发文档</a></li>
-		            <li><a href="https://docs.open.alipay.com/399" target="_blank">支付宝开发商文档</a></li>
-		             <li role="separator" class="divider"></li>
-		            <li><a href="http://www.runoob.com/try/bootstrap/layoutit/" target="_blank">Bootstrap可视化布局</a></li>
-		            <li><a href="http://cssnb.com/iframe/rgb/rgb.html" target="_blank">RGB颜色对照表</a></li>
-		        </ul>
-	        </li>
-	        <li class="[document]"><a href="<?php echo U('Tool/more/document');?>" >文档大全</a></li>
-	        <li class="dropdown active">
+	
+	        <li class="active"><a href="<?php echo U('Tool/more/document');?>" >文档大全</a></li>
+	        <li class="dropdown [more]">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多<span class="caret"></span></a>
 	           <ul class="dropdown-menu">
+	              	<li> <a href="<?php echo U('Tool/index/twoma');?>">二维码生成</a></li>
 	           		<li> <a href="<?php echo U('Tool/more/zz');?>">正则表达式</a></li>
 		            <li><a href="<?php echo U('Tool/more/duibi');?>">代码对比/归并</a></li>
 		            <li><a href="<?php echo U('Tool/more/icomake');?>">ICO在线生成</a></li>
@@ -126,43 +102,42 @@
 	</nav>
 </div>
 	<!-- <p class="bg-warning msgs">...</p> -->
-	<div class="left_kuang">
-		<div class="left_main">
+	<div class="left_kuang1">
+		<div class="left_main1">
 			<div class="min-title">
-				<h1>ICO在线生成</h1>
+				<h1>常用文档大全</h1>
 			    <!-- <h3>请在下框输入您要转换的内容:</h3>   -->
 			</div>
 			   <!-- /工具开始 -->
-			<iframe src="http://cssnb.com/iframe/ico/index.php" style="width: 100%;height:350px;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"></iframe>	
+			<div class="dov" style="width: 100%;height:850px;">
+				<span><h4>经典文档大全（连载中）</h4></span>
+				<hr>
+				<a  class="mtop btn btn-primary"  href="https://openhome.alipay.com/platform/appDaily.htm" target="_blank">沙箱</a>
+				<a  class="mtop btn btn-primary" href="https://openclub.alipay.com/index.php" target="_blank">支付源码</a>
+				<a  class="mtop btn btn-primary" href="https://docs.open.alipay.com/54/" target="_blank">支付资源下载</a>
+				<a   class="mtop btn btn-primary" href="http://laravelacademy.org" target="_blank">Laravel学院</a>
+				<a   class="mtop btn btn-primary" href="https://php.golaravel.com/" target="_blank">PHP手册</a>
+				<a   class="mtop btn btn-primary" href="https://doub.bid/vps-tj/" target="_blank">便宜VPN推荐</a>
+				<a   class="mtop btn btn-primary" href="http://www.bejson.com/apidoc/jquery/" target="_blank">JQuery文档</a>
+				<a   class="mtop btn btn-primary" href="http://v3.bootcss.com/components/" target="_blank">Bootstrap文档</a>
+				<a   class="mtop btn btn-primary" href="https://cn.vuejs.org/v2/api/" target="_blank">vuejs</a>
+				<a   class="mtop btn btn-primary" href="http://wiki.open.qq.com/wiki/%E9%A6%96%E9%A1%B5" target="_blank">腾讯开发平台</a>
+				<a   class="mtop btn btn-primary" href="https://mp.weixin.qq.com/wiki" target="_blank">微信公众平台开发文档</a>
+				<a   class="mtop btn btn-primary" href="https://pay.weixin.qq.com/wiki/doc/api/index.html" target="_blank">微信支付开发文档</a>
+				<a   class="mtop btn btn-primary" href="http://open.taobao.com/doc2/apiList.htm" target="_blank">淘宝开发文档</a>
+				<a   class="mtop btn btn-primary" href="https://doc.open.alipay.com/doc2/alipayDocIndex.htm" target="_blank">支付宝开发文档</a>
+				<a   class="mtop btn btn-primary" href="https://docs.open.alipay.com/399" target="_blank">支付宝开发商文档</a>
+				<a   class="mtop btn btn-primary" href="http://www.runoob.com/try/bootstrap/layoutit/" target="_blank">Bootstrap可视化布局</a>
+				<a   class="mtop btn btn-primary" href="http://cssnb.com/iframe/rgb/rgb.html" target="_blank">RGB颜色对照表</a>
+			
+				
+				<hr>
+				<a   class="mtop btn btn-info" href="http://www.12kanshu.com/" target="_blank">免费小说1（含所有起点付费小说）</a>
+				<a   class="mtop btn btn-info" href="http://www.ixdzs.com" target="_blank">免费小说2（含所有起点付费小说）</a>
+				<hr>
+			</div>
 		</div>
 	</div>
-	<div class="right_kuang" >
-	<div class="right_main">
-		<!-- <strong><center><h4>最新更新</h4></center></strong> -->
-		<div class="panel-heading"><h3 class="widget-title panel-title">最新更新</h3></div>
-		<!-- <hr> -->
-		<div style="margin-left: 15px"><p><a href="<?php echo U('Tool/format/jshtml_format');?>">Javascript/HTML压缩、格式化</a></p>
-		<p><a href="<?php echo U('Tool/format/jsons');?>">JSON 在线解析工具</a></p>
-		<p><a href="<?php echo U('Tool/more/fanyimi');?>">英汉互译</a></p>
-		<p><a href="<?php echo U('Tool/format/xmlzip');?>">XML压缩、格式化</a></p>
-		<p><a href="<?php echo U('Tool/format/csszip');?>">CSS压缩、格式化</a></p></div>
-	</div> 
-	<div class="right_main">
-		<div class="panel-heading"><h3 class="widget-title panel-title">实时热点<span style="float:right;font-size: 10px;margin-top: 10px">搜索指数</span></h3></div>
-		<ul class="list-group">
-		    <li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][1]); ?><span style="float:right"><?php echo ($news['num'][1]); ?>次</span></li>
-			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][2]); ?><span style="float:right"><?php echo ($news['num'][2]); ?>次</span></li>
-			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][3]); ?><span style="float:right"><?php echo ($news['num'][3]); ?>次</span></li>
-			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][4]); ?><span style="float:right"><?php echo ($news['num'][4]); ?>次</span></li>
-			<li class="list-group-item" style="border:none;background: none"><?php echo ($news['content'][5]); ?><span style="float:right"><?php echo ($news['num'][5]); ?>次</span></li>
-		</ul>
-	</div>
-	<div class="right_main_min">
-		<div class="panel-heading"><h3 class="widget-title panel-title">每日说说：</h3></div>
-		<div style="margin-left: 15px"><p><h6>成功离你很近的，坚持！</h6></p></div> 
-
-	</div>
-</div>
 	<div class="button_main">
 	<div class="panel panel-default friend-link yinyin">
 		<div class="panel-heading">友情链接（互换友链联系QQ1113249273，接受程序博客相关站点）
@@ -216,6 +191,7 @@
 		</div>
 	</div>
 </div>
+
 </div>
 </body>
 </html>

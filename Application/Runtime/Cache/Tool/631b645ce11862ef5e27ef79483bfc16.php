@@ -36,7 +36,7 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-	        <li class="[erweima]"> <a href="<?php echo U('Tool/index/twoma');?>">二维码生成<span class="sr-only">(current)</span></a></li>
+	     
 	        <!-- <li><a href="#">翻译 <span class="sr-only">(current)</span></a></li> -->
 	        <li class="[mi]">
 	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">编码/加密 <span class="caret"></span></a>
@@ -60,8 +60,11 @@
 	            <li><a href="#">One more separated link</a></li> -->
 	          </ul>
 	        </li>
-	        <li class="[zhengze]"> <a href="<?php echo U('Tool/more/zz');?>">正则表达式<span class="sr-only">(current)</span></a></li>
+	        
 	        <li class="active"> <a href="<?php echo U('Tool/more/download');?>">下载中心<span class="sr-only">(current)</span></a></li>
+	        <!-- <li> <a href="https://mart.coding.net/projects" target="_blank">代码交易市场<span class="sr-only">(current)</span></a></li> -->
+
+
 	      </ul>
 	      <!-- <form class="navbar-form navbar-left">
 	        <div class="form-group">
@@ -70,30 +73,13 @@
 	        <button type="submit" class="btn btn-default">Submit</button>
 	      </form> -->
 	      <ul class="nav navbar-nav navbar-right">
-	        <li>
-	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">文档<span class="caret"></span></a>
-				
-		        <ul class="dropdown-menu">
-		            <li><a href="https://doub.bid/vps-tj/" target="_blank">便宜VPN推荐</a></li>
-		            <li><a href="http://www.bejson.com/apidoc/jquery/" target="_blank">JQuery文档</a></li>
-		            <li><a href="http://v3.bootcss.com/components/" target="_blank">Bootstrap文档</a></li>
-		            <li><a href="https://cn.vuejs.org/v2/api/" target="_blank">vuejs</a></li>
-		            <li role="separator" class="divider"></li>
-		            <li><a href="http://wiki.open.qq.com/wiki/%E9%A6%96%E9%A1%B5" target="_blank">腾讯开发平台</a></li>
-		            <li><a href="https://mp.weixin.qq.com/wiki" target="_blank">微信公众平台开发文档</a></li>
-		            <li><a href="https://pay.weixin.qq.com/wiki/doc/api/index.html" target="_blank">微信支付开发文档</a></li>
-		             <li role="separator" class="divider"></li>
-		            <li><a href="http://open.taobao.com/doc2/apiList.htm" target="_blank">淘宝开发文档</a></li>
-		            <li><a href="https://doc.open.alipay.com/doc2/alipayDocIndex.htm" target="_blank">支付宝开发文档</a></li>
-		            <li><a href="https://docs.open.alipay.com/399" target="_blank">支付宝开发商文档</a></li>
-		             <li role="separator" class="divider"></li>
-		            <li><a href="http://www.runoob.com/try/bootstrap/layoutit/" target="_blank">Bootstrap可视化布局</a></li>
-		            <li><a href="http://cssnb.com/iframe/rgb/rgb.html" target="_blank">RGB颜色对照表</a></li>
-		        </ul>
-	        </li>
+	
+	        <li class="[document]"><a href="<?php echo U('Tool/more/document');?>" >文档大全</a></li>
 	        <li class="dropdown [more]">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多<span class="caret"></span></a>
 	           <ul class="dropdown-menu">
+	              	<li> <a href="<?php echo U('Tool/index/twoma');?>">二维码生成</a></li>
+	           		<li> <a href="<?php echo U('Tool/more/zz');?>">正则表达式</a></li>
 		            <li><a href="<?php echo U('Tool/more/duibi');?>">代码对比/归并</a></li>
 		            <li><a href="<?php echo U('Tool/more/icomake');?>">ICO在线生成</a></li>
 		            <li><a href="<?php echo U('Tool/more/zishu');?>">字数统计工具</a></li>
@@ -106,7 +92,7 @@
 		        </ul>
 	        </li>
 	        <li><a href="http://cssnb.com/iframe/woman/chatwoman.html" target="_blank">美人儿<span class="sr-only">(current)</span></a></li>
-	        <li class="[liu]"><a href="<?php echo U('Tool/more/message');?>" >留言板</a></li>
+	        <li class="[liu]"><a href="<?php echo U('Tool/more/message');?>" >心情</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
@@ -134,7 +120,7 @@
 				<button type="button" class="btn btn-primary" onclick="d9()" title="">3600次鼠标连点器</button>
 				<button type="button" class="btn btn-primary" onclick="d10()" title="">网页自动刷新工具</button>
 				<hr>
-				<button type="button" class="btn btn-info" onclick="d11()">Composer</button>
+				<button type="button" class="btn btn-info" onclick="d11()">Composer安装</button>
 				<button type="button" class="btn btn-info" onclick="d12()">PuTTY</button>
 				<button type="button" class="btn btn-info" onclick="d13()">Putty_key_gen</button>
 				<button type="button" class="btn btn-info" onclick="d14()">Copssh_4.1.0</button>
@@ -200,6 +186,6 @@
 </div>
 
 </div>
-<script type="text/javascript" src='/Public/statics/self/download.js'></script>
+<script type="text/javascript" src='/Public/statics/self/js/download.js'></script>
 </body>
 </html>
