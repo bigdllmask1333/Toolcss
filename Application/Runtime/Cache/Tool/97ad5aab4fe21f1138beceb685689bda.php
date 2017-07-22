@@ -64,7 +64,7 @@
 	          </ul>
 	        </li>
 	        
-	        <li class="[download]"> <a href="<?php echo U('Tool/more/download');?>">下载中心<span class="sr-only">(current)</span></a></li>
+	        <li class="[download]"> <a href="<?php echo U('Tool/more/download');?>">软件下载<span class="sr-only">(current)</span></a></li>
 	        <!-- <li> <a href="https://mart.coding.net/projects" target="_blank">代码交易市场<span class="sr-only">(current)</span></a></li> -->
 
 
@@ -77,6 +77,7 @@
 	      </form> -->
 	      <ul class="nav navbar-nav navbar-right">
 	
+	        <li class="[shouce]"><a href="<?php echo U('Tool/more/shouce');?>" >手册下载</a></li>
 	        <li class="active"><a href="<?php echo U('Tool/more/document');?>" >文档大全</a></li>
 	        <li class="dropdown [more]">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多<span class="caret"></span></a>

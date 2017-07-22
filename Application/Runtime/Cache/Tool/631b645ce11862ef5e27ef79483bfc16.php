@@ -64,7 +64,7 @@
 	          </ul>
 	        </li>
 	        
-	        <li class="active"> <a href="<?php echo U('Tool/more/download');?>">下载中心<span class="sr-only">(current)</span></a></li>
+	        <li class="active"> <a href="<?php echo U('Tool/more/download');?>">软件下载<span class="sr-only">(current)</span></a></li>
 	        <!-- <li> <a href="https://mart.coding.net/projects" target="_blank">代码交易市场<span class="sr-only">(current)</span></a></li> -->
 
 
@@ -77,6 +77,7 @@
 	      </form> -->
 	      <ul class="nav navbar-nav navbar-right">
 	
+	        <li class="[shouce]"><a href="<?php echo U('Tool/more/shouce');?>" >手册下载</a></li>
 	        <li class="[document]"><a href="<?php echo U('Tool/more/document');?>" >文档大全</a></li>
 	        <li class="dropdown [more]">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多<span class="caret"></span></a>
@@ -110,7 +111,7 @@
 			</div>
 			   <!-- /工具开始 -->
 			<div style="width: 100%;height:850px;">
-				<span><h4>编程 工具大全（工具整理中）</h4></span>
+				<span><h4>实用工具大全</h4></span>
 				<hr>
 				<button type="button" class="btop btn btn-primary" onclick="d1()" title="完美解决vm虚拟机清理不干净而导致不能装新的虚拟机的困扰">vmclean</button>
 				<button type="button" class="btop btn btn-primary" onclick="d2()" title="">vc14_x86</button>

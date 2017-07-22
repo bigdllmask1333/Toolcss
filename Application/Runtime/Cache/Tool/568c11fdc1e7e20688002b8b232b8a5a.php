@@ -61,7 +61,7 @@
 	          </ul>
 	        </li>
 	        
-	        <li class="[download]"> <a href="<?php echo U('Tool/more/download');?>">下载中心<span class="sr-only">(current)</span></a></li>
+	        <li class="[download]"> <a href="<?php echo U('Tool/more/download');?>">软件下载<span class="sr-only">(current)</span></a></li>
 	        <!-- <li> <a href="https://mart.coding.net/projects" target="_blank">代码交易市场<span class="sr-only">(current)</span></a></li> -->
 
 
@@ -73,35 +73,8 @@
 	        <button type="submit" class="btn btn-default">Submit</button>
 	      </form> -->
 	      <ul class="nav navbar-nav navbar-right">
-	        <li>
-	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">文档<span class="caret"></span></a>
-				
-		        <ul class="dropdown-menu">
-		            <li><a href="https://openhome.alipay.com/platform/appDaily.htm" target="_blank">沙箱</a></li>
-		            <li><a href="https://openclub.alipay.com/index.php" target="_blank">支付源码</a></li>
-		            <li><a href="https://docs.open.alipay.com/54/" target="_blank">支付资源下载</a></li>
-		            <li><a href="http://www.12kanshu.com/" target="_blank">免费小说1（含所有起点付费小说）</a></li>
-		            <li><a href="http://www.ixdzs.com" target="_blank">免费小说2（含所有起点付费小说）</a></li>
-		            <!-- <li><a href="http://www.php.cn/course/332.html" target="_blank">博客开发</a></li> -->
-		            <li><a href="http://laravelacademy.org" target="_blank">Laravel学院</a></li>
-		            <li><a href="https://php.golaravel.com/" target="_blank">PHP手册</a></li>
-		            <li><a href="https://doub.bid/vps-tj/" target="_blank">便宜VPN推荐</a></li>
-		            <li><a href="http://www.bejson.com/apidoc/jquery/" target="_blank">JQuery文档</a></li>
-		            <li><a href="http://v3.bootcss.com/components/" target="_blank">Bootstrap文档</a></li>
-		            <li><a href="https://cn.vuejs.org/v2/api/" target="_blank">vuejs</a></li>
-		            <li role="separator" class="divider"></li>
-		            <li><a href="http://wiki.open.qq.com/wiki/%E9%A6%96%E9%A1%B5" target="_blank">腾讯开发平台</a></li>
-		            <li><a href="https://mp.weixin.qq.com/wiki" target="_blank">微信公众平台开发文档</a></li>
-		            <li><a href="https://pay.weixin.qq.com/wiki/doc/api/index.html" target="_blank">微信支付开发文档</a></li>
-		             <li role="separator" class="divider"></li>
-		            <li><a href="http://open.taobao.com/doc2/apiList.htm" target="_blank">淘宝开发文档</a></li>
-		            <li><a href="https://doc.open.alipay.com/doc2/alipayDocIndex.htm" target="_blank">支付宝开发文档</a></li>
-		            <li><a href="https://docs.open.alipay.com/399" target="_blank">支付宝开发商文档</a></li>
-		             <li role="separator" class="divider"></li>
-		            <li><a href="http://www.runoob.com/try/bootstrap/layoutit/" target="_blank">Bootstrap可视化布局</a></li>
-		            <li><a href="http://cssnb.com/iframe/rgb/rgb.html" target="_blank">RGB颜色对照表</a></li>
-		        </ul>
-	        </li>
+	
+	        <li class="[shouce]"><a href="<?php echo U('Tool/more/shouce');?>" >手册下载</a></li>
 	        <li class="[document]"><a href="<?php echo U('Tool/more/document');?>" >文档大全</a></li>
 	        <li class="dropdown active">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多<span class="caret"></span></a>
